@@ -1,0 +1,32 @@
+table, th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+.tagslink, .semalink, .csslink, h1, h2, h3 {
+  background-color:Gold;
+}
+nav, h1, h2, h3 {
+  text-align: center;
+}
+mark {
+  background-color:Gold;
+}
+h1, h2, h3, p, table {
+  font-family:Helvetica;
+}
+body {
+  background-color:Gainsboro;
+}
+aside {
+  background-color:Darkgrey;
+  font-family:Helvetica;
+}
+th, td {
+  background-color:Cornsilk;
+}
+table {
+  background-color:Grey;
+}
+.code {
+  font-family: monospace;
+}

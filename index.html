@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MY OWN CODECADEMY CHEAT SHEET</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <header>
+      <h1 class="maintitle">MY CODECADEMY CHEAT SHEET</h1>
+      <nav>
+        <p class="topmenu">
+          <a href="#htmltags" class="tagslink">html tags</a>
+          <a href="#semantictags" class="semalink">semantic tags</a>
+          <a href="#cssselectors" class="csslink">css selectors</a>
+        </p>
+      </nav>
+    </header>
+    <main>
+      <section class="section1">
+        <article class="article1">
+          <h2 class="htmltags" id="htmltags">HTML tags</h2>
+
+          <h3>&lt;head&gt;</h3>
+          <p class="html01">
+          The <b>&lthead&gt</b> element is a container for <b>metadata</b> (data about data) and is placed between the <b>&lthtml&gt</b> tag and the <b>&ltbody&gt</b> tag.
+<br><br>
+HTML metadata is data about the HTML document. Metadata is not displayed.
+<br><br>
+Metadata typically define the document title, character set, styles, scripts, and other meta information.
+<br><br>
+The HTML &lthead&gt element is a container for the following elements: <b>&lt;title&gt;, &lt;style&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;script&gt;, and &lt;base&gt;</b>.
+<br>
+            <aside>
+            <p><mark>These are the examples for the head elements in action:</mark></p>
+            <b>
+            &lt;title&gt;MY OWN CODECADEMY CHEAT SHEET&lt;/title&gt;
+            <br>
+&lt;meta charset="UTF-8"&gt;
+            <br>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+            </b>
+            <br>
+            </aside>
+          </p>
+          <h3>&lt;body&gt;</h3>
+          <p class="bodytag">
+            The <b>&lt;body&gt;</b> element defines the document's body.
+<br><br>
+It has a start tag <b>&lt;body&gt;</b> and an end tag <b>&lt;/body&gt;</b>.
+<br><br>
+Then, inside the <b>&lt;body&gt;</b> element there are other elements, such as <b>&lt;h1&gt;</b>, <b>&lt;p&gt;</b> and <b>&lt;div&gt;</b>.
+          </p>
+          <h3>&lt;header&gt;</h3>
+          <p class="header">
+            The <b>&lt;header&gt;</b> element defines the document's header (not to be mistaken with &lt;head&gt; element), which normally contains title, navigation links, short into etc.
+<br><br>
+It has a start tag <b>&lt;header&gt;</b> and an end tag <b>&lt;/header&gt;</b>.
+<br><br>
+Then, inside the <b>&lt;header&gt;</b> element there are other elements, such as <b>&lt;nav&gt;</b>, <b>&lt;img&gt;</b> and <b>&lt;a&gt;</b>.
+          </p>
+          <h3>&lt;main&gt;</h3>
+          <p class="main">
+            The <b>&lt;main&gt;</b> element defines the document's core data, which contains the main information.
+<br><br>
+It has a start tag <b>&lt;main&gt;</b> and an end tag <b>&lt;/main&gt;</b>.
+<br><br>
+Then, inside the <b>&lt;main&gt;</b> element there are other elements, such as <b>&lt;table&gt;</b>, <b>&lt;section&gt;</b> and <b>&lt;article&gt;</b>.
+          </p>
+          <h3>&lt;footer&gt;</h3>
+          <p class="footer">
+            The <b>&lt;footer&gt;</b> element defines the document's footer, which normally has an information about site's ownership, additional navigation links, contacts etc.
+<br><br>
+It has a start tag <b>&lt;footer&gt;</b> and an end tag <b>&lt;/footer&gt;</b>.
+<br><br>
+Then, inside the <b>&lt;footer&gt;</b> element there are other elements, such as <b>&lt;a&gt;</b> and <b>&lt;ul&gt;</b>.
+        </p>
+        <h3>&lt;table&gt;</h3>
+          <p class="table">
+            HTML &lt;table&gt; allow web developers to arrange data into rows and columns.
+<br><br>
+Each table row is defined with a &lt;tr&gt; tag. Each table header is defined with a &lt;th&gt; tag. Each table data/cell is defined with a &lt;td&gt; tag.
+<br><br>
+By default, the text in &lt;th&gt; elements are bold and centered.
+<br><br>
+By default, the text in &lt;td&gt; elements are regular and left-aligned.
+<br>
+        </p>
+        <aside>
+          <p class="tablecontainer">
+            <h3 class="tabletags">Table tags:</h3>
+            <p>Below is the example of the HTML table and its tags:</p>
+            <table class="tablereal">
+              <thead>
+                <tr>
+                  <th>Tag</th>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr>
+                  <td class="code">&lt;table&gt;</td>
+                  <td>Table</td>
+                  <td>The wrapper element for all HTML tables</td>
+                </tr>
+                <tr>
+                  <td class="code">&lt;thead&gt;</td>
+                  <td>Table head</td>
+                  <td>The set of rows defining the column headers in a table</td>
+                </tr>
+                <tr>
+                  <td class="code">&lt;tbody&gt;</td>
+                  <td>Table body</td>
+                  <td>The set of rows containing actual table data</td>
+                </tr>
+                <tr>
+                  <td class="code">&lt;tr&gt;</td>
+                  <td>Table row</td>
+                  <td>The table row container</td>
+                </tr>
+                <tr>
+                  <td class="code">&lt;th&gt;</td>
+                  <td>Table head data</td>
+                  <td>The table header row data container</td>
+                </tr>
+                <tr>
+                  <td class="code">&lt;td&gt;</td>
+                  <td>Table data</td>
+                  <td>The table row data container</td>
+                </tr>
+                <tr>
+                  <td class="code">&lt;tfoot&gt;</td>
+                  <td>Table footer</td>
+                  <td>The set of rows defining the footer in a table</td>
+                </tr>
+              </tbody>
+            </table>
+            <h3 class="tableattributes">Table attributes:</h3>
+            <p>Below is the example of the HTML table's attributes:</p>
+            <table class="tablereal2">
+              <thead>
+                <tr>
+                  <th>Attribute</th>
+                  <th>Name</th>
+                  <th>Description</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr>
+                  <td class="code">colspan</td>
+                  <td>Column span</td>
+                  <td>Defines how many columns a td element should span</td>
+                </tr>
+                <tr>
+                  <td class="code">rowspan</td>
+                  <td>Row span</td>
+                  <td>Defines how many rows a td element should span</td>
+                </tr>
+              </tbody>
+            </table>
+          </p>
+        </aside>
+        </article>
+        <article class="article2">
+          <h2 class="semantictags" id="semantictags">Semantic tags</h2>
+          <p class="html02">
+            <h3>&lt;section&gt;</h3>
+            <h3>&lt;article&gt;</h3>
+            <h3>&lt;video&gt;</h3>
+            <h3>&lt;audio&gt;</h3>
+            <h3>&lt;embed&gt;</h3>
+          </p>
+        </article>
+        <article class="article3">
+          <h2 class="cssselectors" id="cssselectors">CSS selectors</h2>
+          <p class="css01">
+
+          </p>
+        </article>
+      </section>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
