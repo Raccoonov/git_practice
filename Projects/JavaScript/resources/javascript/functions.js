@@ -113,8 +113,81 @@ function monitorCount(rows, columns) {
 const squareNum = (num) => {
     return num * num;
   };
-  // We can refactor the function to:
-  const squareNum = num => num * num;
-  //
-  //
-  //
+// We can refactor the function to:
+const squareNum = num => num * num;
+//
+const greetWorld = () => {
+    let greeting = 'Hello, World!';
+    return greeting;
+  };
+//
+const canIVote = (age) => {
+  return age >= 18;
+};
+//
+const agreeOrDisagree = (opinion1, opinion2) => {
+  if (opinion1 === opinion2) {
+    const messageAgree = 'You agree!';
+    return messageAgree;
+  } else {
+    const messageDisagree = 'You disagree!';
+    return messageDisagree;
+  }
+}
+//
+const lifePhase = (age) => {
+  if (age >= 0 && age <= 3) {
+    const baby = 'baby';
+    return baby;
+  } else if (age >= 4 && age <= 12) {
+    const child = 'child';
+    return child;
+  } else if (age >= 13 && age <= 19) {
+    const teen = 'teen';
+    return teen;
+  } else if (age >= 20 && age <= 64) {
+    const adult = 'adult';
+    return adult;
+  } else if (age >= 65 && age <= 140) {
+    const senior = 'senior citizen';
+    return senior;
+  } else {
+    const other = 'This is not a valid age';
+    return other;
+  }
+};
+//
+function lifePhase(age) {
+  switch (true) {
+      case age >= 0 && age<= 3:
+      return 'baby';
+      case age >= 4 && age <= 12:
+      return 'child';
+      case age >=13 && age <= 19:
+      return 'teen';
+      case age >= 20 && age <= 64:
+      return 'adult';
+      case age >= 65 && age <= 140:
+      return 'senior citizen';
+      default:
+      return 'this is not a valid age';
+  }
+}
+console.log(lifePhase(5))
+//
+function lifePhase(age) {
+  let classifications = [
+    [0, 3, 'baby'],
+    [4, 12, 'child'],
+    [13, 19, 'teen'],
+    [20, 64, 'adult'],
+    [65, 140, 'senior citizen'],
+  ]
+  for (let [low, high, classification] of classifications) {
+    if (low <= age && age <= high) {
+      return classification
+    }
+  }
+  return 'this is not a valid age'
+}
+//
