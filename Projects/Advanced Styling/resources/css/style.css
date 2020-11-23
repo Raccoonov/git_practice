@@ -1,8 +1,389 @@
 /* TIPS AND TRICKS */
+ 
+/* Inserting fonface links directly into the CSS: */
 
+/* latin-ext */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Space Mono'), local('SpaceMono-Regular'), url(https://fonts.gstatic.com/s/spacemono/v6/i7dPIFZifjKcF5UAWdDRYE98RWq7.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Space Mono'), local('SpaceMono-Regular'), url(https://fonts.gstatic.com/s/spacemono/v6/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Space Mono Bold'), local('SpaceMono-Bold'), url(https://fonts.gstatic.com/s/spacemono/v6/i7dMIFZifjKcF5UAWdDRaPpZUFuaHjyV.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Space Mono Bold'), local('SpaceMono-Bold'), url(https://fonts.gstatic.com/s/spacemono/v6/i7dMIFZifjKcF5UAWdDRaPpZUFWaHg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Local Fonts Grab */
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto.woff2) format('woff2'),
+       url(../fonts/Roboto.woff) format('woff'),
+       url(../fonts/Roboto.tff) format('truetype'),
+}
+
+/* */
 /* resetting default styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+ 
+/*
+Links have four main states: normal (not clicked), hover, active (clicked), and visited. These four states have associated CSS pseudo-classes: :link, :hover, :active, and :visited. These four states can be used to give a full range of visual feedback to users about the status of their link interaction.
+
+Each state should still make it clear that the element in question is a link, meaning it should not make text identical to non-link text or alter the link’s appearance so much that users could perceive its behavior differently.
+
+The ordering of link state pseudo-class rules is important to reveal the proper information. When a user hovers and then clicks a link, those styles should always override the static styling surrounding a user’s history with the link (unvisited :link and :visited). The proper order of these rules is:
+
+:link
+:visited
+:hover
+:active
+This ordering will ensure that the rules cascade properly and the user can receive the most applicable visual feedback about the state of the link.
+*/
+
+a {
+  color: #466995;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #466995;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:active {
+  color: #DBE9EE;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.question-link:visited {
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.question-link:active {
+  color: #DBE9EE;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*
+BUTTONS (Skeuomorphism and Flat Design)
+*/
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 400px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.button {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.skeuomorphic {
+  border: 2px solid #0c960c;
+  border-radius: 5px;
+  color: #F8F8F8;
+  text-shadow: 0 -2px #006bb3;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2), 0px -2px 2px rgba(255, 255, 255, 0.5) inset, 0 2px 2px rgba(255, 255, 255, 0.8) inset;
+  background: #1D1;
+  background: linear-gradient(#1D1, #0ebc0e);
+  text-shadow: 0 -2px #0c960c;
+  
+}
+
+.skeuomorphic:hover {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1), 0px -2px 2px rgba(255, 255, 255, 0.25) inset, 0 2px 2px rgba(255, 255, 255, 0.4) inset;
+  background: #0ebc0e;
+  background: linear-gradient(#0ebc0e, #0c960c);
+  border-color: #064f06;
+}
+
+.skeuomorphic:active {
+  margin-top: 2px;
+  margin-bottom: -2px;
+  box-shadow: 0px 2px 2px rgba(63, 63, 63, 0.1), 0px -2px 2px rgba(255, 255, 255, 0.25) inset, 0 2px 2px rgba(255, 255, 255, 0.4) inset;
+  background: #0c960c;
+  background: linear-gradient(#0c960c, #0ebc0e);
+}
+
+.flat {
+  background-color: #1D1;
+  color: #fff;
+  border: 2px solid #12dd23;
+  border-radius: 10px;
+}
+
+.flat:hover {
+  background-color: #0c960c;
+  transition: background-color .15s, font-size .15s;
+  font-size: 18px;
+}
+
+.flat:active {
+  border-color: #fff;
+}
+
+/*
+BASIC SKEUOMORPHIC BUTTON IN CSS
+*/
+
+.button {
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0px 5px;
+}
+ 
+.button:hover {
+  cursor: pointer;
+}
+ 
+.button:active {
+  margin-top: 5px;
+  color: black;
+  box-shadow: 0px 0px;
+}
+
+/*
+A BIT MORE ADVANCED SKEUOMORPHIC BUTTON IN CSS
+*/
+
+.question-link:visited{
+  color: #ffffff;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+a:link {
+  color: #61bff9;
+}
+
+a:visited {
+  color: #466995;
+}
+
+a:hover { 
+  text-decoration: none;
+}
+
+a:active, .question-link:active {
+  color:#DBE9EE;
+}
+
+.answer {
+  border: 1px solid #466995;
+  border-radius: 10px;
+  box-shadow: 0px 4px;
+}
+
+.answer:active {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0px 0px;
+  background-color: #C0D6DF;
+  color: #ffffff;
+}
+
+/*
+FLAT DESIGN BUTTONS
+*/
+
+.answer {
+  border: 1px solid #466995;
+  color: #61bff9;
+  text-decoration: none;
+}
+
+.answer:active {
+  background-color: #C0D6DF;
+  color: #FFFFFF;
+}
+
+/*
+TRANSITIONS
+*/
+.btn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: hsla(30, 0%, 100%, 1);
+  background-color: hsla(30, 0%, 100%, .3);
+  border-radius: 10px;
+  transition: all 1s ease-out;
+}
+
+.btn:hover {
+  background-color: hsla(30, 0%, 100%, .4);
+  transition: all 1s ease-out;
+}
+
+.btn:active {
+  background-color: hsla(30, 0%, 100%, .4);
+  color: red;
+  transition: all 0.1s ease-out;
+}
+
+/*
+BREADCRUMBS
+
+Use breadcrumbs to indicate where a user is and the extent of the site
+Breadcrumbs are implemented using unordered lists in HTML with custom CSS styling
+Three types of breadcrumbs exist:
+location - based on hierarchical structure of site
+attribute - based on attributes of current page or item
+path - unique to a user’s journey on the site
+Path-based breadcrumbs can be confusing, only use if needed
+Ensure breadcrumbs will add value before adding to a site
+
+*/
+.breadcrumb > li {
+  display: inline;
+}
+
+.breadcrumb li+li::before {
+	padding: 10px;
+  content: ">";
+}
+
+.breadcrumb a {
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: red;
+}
+/*
+ADVANCED BREADCRUMBS - ARROWS
+*/
+.breadcrumb {
+  text-align: left;
+}
+
+.breadcrumb li {
+  float: left;
+}
+
+.breadcrumb a {
+  color: #fff;
+  background: darkcyan;
+  text-decoration: none;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-right: 15px;
+  padding: 0 5px;
+}
+
+.breadcrumb a::before,
+.breadcrumb a::after {
+  content: "";
+  position: absolute;
+  border-color: darkcyan;
+  border-style: solid;
+  border-width: 15px 5px;
+}
+
+.breadcrumb a::before {
+  left: -10px;
+    border-left-color: transparent;
+}
+.breadcrumb a::after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: darkcyan;
+}
+
+.breadcrumb a:hover {
+  background-color: blue;
+}
+.breadcrumb a:hover::before {
+  border-color: blue;
+  border-left-color: transparent;
+}
+.breadcrumb a:hover::after {
+  border-left-color: blue;
+}
+/*
+BREADCRUMBS - LOCATION AND ATTRIBUTE CLASSES
+*/
+.breadcrumb {
+  text-align: left;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb li.location+li.location::before {
+  color: gray;
+  content: ">";
+}
+
+.breadcrumb a {
+  display: inline;
+}
+
+.attribute a {
+    color: gray;
+}
+
+.attribute a::after {
+  content: " x";
+  font-size: 8px;
+  vertical-align: super;
+}
+/*
+
+*/
