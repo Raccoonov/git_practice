@@ -1,1 +1,44 @@
+<!-- RESPONSIVE DESIGN PRO TIPS FROM https://www.taniarascia.com/you-dont-need-a-framework/
 
+Foundation
+
+Define Viewport
+
+Before you do anything else, you have to define the width of the viewport in your HTML. This will ensure that your site has no horizontal scroll - the full site will be visible, and users will not have to zoom on mobile to see the content.
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!--
+Include a Browser Reset
+
+Every browser renders content a little differently. Also, some people use out of date browsers. Some developers have created stylesheets to combat these issues. The two most widely used are Reset and Normalize. The difference between the two is that Reset completely eradicates all styles, while Normalize attempts to add consistency to the browser styling. I prefer Normalize, because you don't have to go back and re-style every element.
+
+Normalize CDN
+-->
+<link rel="stylesheet" href="css/normalize.min.css" />
+
+<!--
+Reset Border Box
+
+This is something that's left out of the reset that I would strongly recommend including in any project. Read more about it if you'd like. It will make your padding consistent and prevent frustration.
+-->
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+<!--
+Include jQuery (optional)
+
+Writing vanilla JavaScript can be tedious. Include jQuery if you'd like.
+
+jQuery CDN
+-->
+<script src="js/jquery.min.js"></script>
+<!--
+A CDN is a link to a stylesheet or script generously provided by a large company that will access the file on a server close to the location of the client.
+-->
