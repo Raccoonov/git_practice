@@ -1,0 +1,2066 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>European Touristic Company — Curated European Travel</title>
+  <meta name="description" content="European Touristic Company offers bespoke tours across Europe — from Mediterranean coastlines to Alpine peaks and historic city walks. Expert guides. Lifelong memories." />
+  <meta property="og:title" content="European Touristic Company" />
+  <meta property="og:description" content="Bespoke European travel, curated for discerning travellers." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300..600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="logo" aria-label="European Touristic Company — home">
+        <svg class="logo__mark" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 18 Q18 8 28 18 Q18 28 8 18Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+          <circle cx="18" cy="18" r="3" fill="currentColor"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__abbr">ETC</span>
+          <span class="logo__full">European Touristic Company</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list" role="list">
+          <li><a href="#destinations" class="nav__link" data-i18n="nav.destinations">Destinations</a></li>
+          <li><a href="#tours" class="nav__link" data-i18n="nav.tours">Tours</a></li>
+          <li><a href="#experiences" class="nav__link" data-i18n="nav.experiences">Experiences</a></li>
+          <li><a href="#about" class="nav__link" data-i18n="nav.about">About Us</a></li>
+          <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn btn--outline btn--sm" data-i18n="nav.planTrip" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Plan Your Trip</button>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="hamburger" id="hamburger" data-i18n-aria="nav.openMenu" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile nav drawer -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#destinations" class="nav__link" data-i18n="nav.destinations">Destinations</a></li>
+      <li><a href="#tours" class="nav__link" data-i18n="nav.tours">Tours</a></li>
+      <li><a href="#experiences" class="nav__link" data-i18n="nav.experiences">Experiences</a></li>
+      <li><a href="#about" class="nav__link" data-i18n="nav.about">About Us</a></li>
+      <li><a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn--primary" style="margin-top:2rem;display:inline-block" data-i18n="nav.planTrip">Plan Your Trip</a>
+  </div>
+
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="home">
+      <div class="hero__bg">
+        <!-- Layered SVG landscape illustration -->
+        <svg class="hero__landscape" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Sky gradient -->
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#1a2d5a"/>
+              <stop offset="60%" stop-color="#2b4a8a"/>
+              <stop offset="100%" stop-color="#4a6fa5"/>
+            </linearGradient>
+            <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#2b5095"/>
+              <stop offset="100%" stop-color="#1a2d5a"/>
+            </linearGradient>
+            <linearGradient id="sunsetGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="transparent"/>
+              <stop offset="40%" stop-color="#c4933f22"/>
+              <stop offset="60%" stop-color="#c4933f33"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </linearGradient>
+            <radialGradient id="sunGlow" cx="70%" cy="35%" r="30%">
+              <stop offset="0%" stop-color="#e8b86d" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </radialGradient>
+          </defs>
+
+          <!-- Sky -->
+          <rect width="1440" height="640" fill="url(#skyGrad)"/>
+          <rect width="1440" height="640" fill="url(#sunGlow)"/>
+
+          <!-- Stars -->
+          <g fill="white" opacity="0.6">
+            <circle cx="80" cy="50" r="1.2"/><circle cx="200" cy="80" r="0.8"/>
+            <circle cx="320" cy="30" r="1"/><circle cx="440" cy="65" r="1.3"/>
+            <circle cx="600" cy="40" r="0.9"/><circle cx="150" cy="120" r="0.7"/>
+            <circle cx="900" cy="55" r="1.1"/><circle cx="1100" cy="35" r="0.8"/>
+            <circle cx="1250" cy="70" r="1.2"/><circle cx="1380" cy="45" r="0.9"/>
+            <circle cx="700" cy="25" r="0.8"/><circle cx="50" cy="160" r="0.6"/>
+          </g>
+
+          <!-- Distant mountains -->
+          <path d="M0 400 L150 260 L280 340 L430 200 L560 310 L700 170 L840 290 L960 220 L1090 300 L1220 180 L1350 270 L1440 230 L1440 640 L0 640Z" fill="#1e3a6e" opacity="0.9"/>
+          <!-- Nearer hills -->
+          <path d="M0 470 L200 370 L400 430 L600 350 L800 410 L1000 360 L1200 420 L1440 370 L1440 640 L0 640Z" fill="#162d56"/>
+          <!-- Foreground hill -->
+          <path d="M0 520 L360 460 L720 500 L1080 455 L1440 490 L1440 640 L0 640Z" fill="#0e1f3e"/>
+
+          <!-- Simplified castle silhouette -->
+          <g fill="#0a1a35" transform="translate(680, 310)">
+            <rect x="0" y="60" width="80" height="80"/>
+            <rect x="10" y="30" width="20" height="50"/>
+            <rect x="50" y="30" width="20" height="50"/>
+            <rect x="10" y="20" width="5" height="15"/><rect x="20" y="20" width="5" height="15"/>
+            <rect x="50" y="20" width="5" height="15"/><rect x="60" y="20" width="5" height="15"/>
+            <rect x="30" y="45" width="20" height="30"/>
+          </g>
+
+          <!-- Mediterranean village far right -->
+          <g fill="#0d1e3d" transform="translate(1100, 360)">
+            <rect x="0" y="40" width="30" height="40"/>
+            <polygon points="0,40 15,20 30,40"/>
+            <rect x="40" y="50" width="25" height="30"/>
+            <polygon points="40,50 52,30 65,50"/>
+            <rect x="75" y="45" width="35" height="35"/>
+            <polygon points="75,45 92,22 110,45"/>
+            <!-- Dome (Byzantine/Orthodox) -->
+            <ellipse cx="92" cy="22" rx="12" ry="8"/>
+            <rect x="87" y="22" width="10" height="5"/>
+          </g>
+
+          <!-- Water / sea at bottom -->
+          <rect x="0" y="570" width="1440" height="70" fill="url(#waterGrad)" opacity="0.8"/>
+          <!-- Water shimmer lines -->
+          <g stroke="#4a7dc4" stroke-width="1" opacity="0.3">
+            <line x1="200" y1="585" x2="400" y2="585"/>
+            <line x1="600" y1="592" x2="850" y2="592"/>
+            <line x1="1000" y1="580" x2="1200" y2="580"/>
+            <line x1="100" y1="600" x2="300" y2="600"/>
+            <line x1="500" y1="608" x2="700" y2="608"/>
+            <line x1="900" y1="598" x2="1100" y2="598"/>
+          </g>
+
+          <!-- Sunset glow overlay -->
+          <rect width="1440" height="640" fill="url(#sunsetGrad)"/>
+
+          <!-- Flying birds -->
+          <g stroke="white" stroke-width="1.5" fill="none" opacity="0.7">
+            <path d="M900 140 Q905 135 910 140"/>
+            <path d="M915 133 Q921 128 927 133"/>
+            <path d="M935 145 Q940 140 945 145"/>
+          </g>
+        </svg>
+      </div>
+
+      <div class="hero__overlay"></div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Est. 1994 · Trusted by 120,000+ travellers</p>
+        <h1 class="hero__title" data-i18n-html="hero.title">Discover Europe,<br><em>Your Way</em></h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">Bespoke journeys across the continent's most iconic landscapes, cities, and hidden treasures — crafted by experts who live and breathe European travel.</p>
+        <div class="hero__cta-group">
+          <button class="btn btn--primary btn--lg" data-i18n="hero.cta.tours" onclick="document.getElementById('tours').scrollIntoView({behavior:'smooth'})">Explore Our Tours</button>
+          <button class="btn btn--ghost btn--lg" data-i18n="hero.cta.destinations" onclick="document.getElementById('destinations').scrollIntoView({behavior:'smooth'})">Browse Destinations</button>
+        </div>
+        <div class="hero__stats">
+          <div class="stat"><span class="stat__num">47</span><span class="stat__label" data-i18n="hero.stat.countries">Countries</span></div>
+          <div class="stat__divider"></div>
+          <div class="stat"><span class="stat__num">320+</span><span class="stat__label" data-i18n="hero.stat.tours">Unique Tours</span></div>
+          <div class="stat__divider"></div>
+          <div class="stat"><span class="stat__num">30 yrs</span><span class="stat__label" data-i18n="hero.stat.experience">Of Experience</span></div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator" aria-hidden="true">
+        <span data-i18n="hero.scroll">Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ========== DESTINATIONS ========== -->
+    <section class="section destinations" id="destinations">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow" data-i18n="dest.eyebrow">Where We Go</p>
+          <h2 class="section__title" data-i18n="dest.title">Iconic Destinations</h2>
+          <p class="section__sub" data-i18n="dest.sub">From ancient ruins to Alpine meadows, our network spans the full breadth of the continent.</p>
+        </header>
+
+        <div class="destinations__grid">
+
+          <article class="dest-card dest-card--large" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-label="Italian countryside">
+                <defs>
+                  <linearGradient id="italySky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#87CEEB"/>
+                    <stop offset="100%" stop-color="#e8d5a0"/>
+                  </linearGradient>
+                </defs>
+                <rect width="600" height="400" fill="url(#italySky)"/>
+                <!-- Rolling hills -->
+                <ellipse cx="150" cy="320" rx="200" ry="100" fill="#6b8c3e"/>
+                <ellipse cx="450" cy="310" rx="220" ry="90" fill="#7a9944"/>
+                <ellipse cx="300" cy="340" rx="280" ry="80" fill="#5a7830"/>
+                <!-- Cypress trees -->
+                <g fill="#2d4a1e">
+                  <ellipse cx="120" cy="260" rx="8" ry="40"/>
+                  <ellipse cx="140" cy="255" rx="8" ry="45"/>
+                  <ellipse cx="160" cy="265" rx="7" ry="35"/>
+                  <ellipse cx="430" cy="255" rx="8" ry="45"/>
+                  <ellipse cx="450" cy="250" rx="9" ry="50"/>
+                  <ellipse cx="470" cy="258" rx="7" ry="38"/>
+                </g>
+                <!-- Villa -->
+                <rect x="250" y="230" width="100" height="70" fill="#d4a96a"/>
+                <polygon points="250,230 300,200 350,230" fill="#b87333"/>
+                <rect x="280" y="265" width="20" height="35" fill="#7a5c3a"/>
+                <!-- Windows -->
+                <rect x="258" y="240" width="15" height="12" fill="#8ab4d4" opacity="0.8"/>
+                <rect x="285" y="240" width="15" height="12" fill="#8ab4d4" opacity="0.8"/>
+                <rect x="312" y="240" width="15" height="12" fill="#8ab4d4" opacity="0.8"/>
+                <!-- Sunflower field -->
+                <g fill="#f5c518">
+                  <circle cx="80" cy="340" r="6"/><circle cx="100" cy="335" r="5"/>
+                  <circle cx="60" cy="345" r="5"/><circle cx="120" cy="338" r="6"/>
+                  <circle cx="500" cy="340" r="6"/><circle cx="520" cy="335" r="5"/>
+                  <circle cx="540" cy="342" r="5"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <span class="dest-card__badge" data-i18n="dest.badge.popular">Most Popular</span>
+              <h3 class="dest-card__name" data-i18n="dest.italy.name">Italy</h3>
+              <p class="dest-card__desc" data-i18n="dest.italy.desc">Rome's eternal ruins, Tuscany's golden light, Venice's labyrinthine canals — Italy rewards every sense.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.italy.meta">42 tours available</span>
+                <a href="#tours" class="dest-card__link" data-i18n="dest.italy.link">Explore Italy →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="dest-card" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-label="French Paris skyline">
+                <defs>
+                  <linearGradient id="parisSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#c9d8f0"/>
+                    <stop offset="100%" stop-color="#e8d8c4"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#parisSky)"/>
+                <!-- Eiffel Tower simplified -->
+                <g fill="#4a4a5a" transform="translate(170,60)">
+                  <polygon points="30,0 50,120 40,120 45,100 35,100 40,120 30,120" fill="#555"/>
+                  <rect x="28" y="115" width="24" height="5"/>
+                  <polygon points="30,0 10,80 50,80" fill="#666" opacity="0.7"/>
+                  <rect x="15" y="75" width="40" height="5"/>
+                  <rect x="5" y="120" width="60" height="8"/>
+                </g>
+                <!-- Haussmann buildings -->
+                <g fill="#c4a882">
+                  <rect x="0" y="160" width="80" height="120"/>
+                  <rect x="85" y="170" width="70" height="110"/>
+                  <rect x="260" y="155" width="75" height="125"/>
+                  <rect x="340" y="165" width="60" height="115"/>
+                </g>
+                <!-- Rooftops -->
+                <g fill="#7a6a5a">
+                  <polygon points="0,160 40,140 80,160"/>
+                  <polygon points="85,170 120,148 155,170"/>
+                  <polygon points="260,155 298,133 335,155"/>
+                  <polygon points="340,165 370,145 400,165"/>
+                </g>
+                <!-- Windows on buildings -->
+                <g fill="#8ab4d4" opacity="0.7">
+                  <rect x="10" y="175" width="12" height="10"/><rect x="30" y="175" width="12" height="10"/>
+                  <rect x="50" y="175" width="12" height="10"/><rect x="10" y="200" width="12" height="10"/>
+                  <rect x="30" y="200" width="12" height="10"/><rect x="50" y="200" width="12" height="10"/>
+                  <rect x="270" y="170" width="12" height="10"/><rect x="295" y="170" width="12" height="10"/>
+                  <rect x="320" y="170" width="12" height="10"/>
+                </g>
+                <!-- Seine river -->
+                <ellipse cx="200" cy="260" rx="200" ry="25" fill="#7ab0d4" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__name" data-i18n="dest.france.name">France</h3>
+              <p class="dest-card__desc" data-i18n="dest.france.desc">Paris, Provence, the Loire Valley châteaux — France is a journey through civilisation's finest chapters.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.france.meta">36 tours</span>
+                <a href="#tours" class="dest-card__link" data-i18n="dest.explore">Explore →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="dest-card" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-label="Alpine scenery Switzerland">
+                <defs>
+                  <linearGradient id="alpsSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#b8d4e8"/>
+                    <stop offset="100%" stop-color="#d4e8f0"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#alpsSky)"/>
+                <!-- Alpine peaks -->
+                <polygon points="0,280 100,80 200,180 300,60 400,140 400,280" fill="#6a8a9a"/>
+                <polygon points="200,180 300,60 400,140 400,280 200,280" fill="#5a7a8a"/>
+                <!-- Snow caps -->
+                <polygon points="100,80 80,110 120,110" fill="white"/>
+                <polygon points="300,60 275,95 325,95" fill="white"/>
+                <!-- Pine trees -->
+                <g fill="#2d4e1e">
+                  <polygon points="50,200 60,160 70,200"/>
+                  <polygon points="55,185 65,152 75,185"/>
+                  <polygon points="340,190 350,155 360,190"/>
+                  <polygon points="345,177 355,142 365,177"/>
+                </g>
+                <!-- Chalet -->
+                <rect x="160" y="195" width="80" height="50" fill="#c4a872"/>
+                <polygon points="155,195 200,175 245,195" fill="#8b5e3c"/>
+                <!-- Lake reflection -->
+                <ellipse cx="200" cy="258" rx="120" ry="20" fill="#a8c8e0" opacity="0.6"/>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__name" data-i18n="dest.switzerland.name">Switzerland</h3>
+              <p class="dest-card__desc" data-i18n="dest.switzerland.desc">Pristine Alpine peaks, mirror lakes and charming chalets in a landscape of breathtaking precision.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.switzerland.meta">28 tours</span>
+                <a href="#tours" class="dest-card__link" data-i18n="dest.explore">Explore →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="dest-card" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-label="Greek islands, Santorini">
+                <defs>
+                  <linearGradient id="greeceSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2a7fd4"/>
+                    <stop offset="100%" stop-color="#5aaae0"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#greeceSky)"/>
+                <!-- Aegean sea -->
+                <rect x="0" y="180" width="400" height="100" fill="#1a6bbb"/>
+                <!-- White buildings of Santorini -->
+                <g fill="white">
+                  <rect x="80" y="120" width="50" height="80"/>
+                  <rect x="140" y="105" width="60" height="95"/>
+                  <rect x="210" y="115" width="45" height="85"/>
+                  <rect x="265" y="100" width="55" height="100"/>
+                  <!-- Blue domes -->
+                  <ellipse cx="105" cy="120" rx="25" ry="15" fill="#1a6bbb"/>
+                  <ellipse cx="170" cy="105" rx="30" ry="18" fill="#1a7acc"/>
+                  <ellipse cx="232" cy="115" rx="22" ry="14" fill="#1a6bbb"/>
+                  <ellipse cx="292" cy="100" rx="27" ry="16" fill="#1565c0"/>
+                </g>
+                <!-- Cliff face -->
+                <polygon points="0,280 0,140 80,120 265,100 350,110 400,130 400,280" fill="#c4a870" opacity="0.6"/>
+                <!-- Water sparkle -->
+                <g stroke="white" stroke-width="1" opacity="0.4">
+                  <line x1="50" y1="210" x2="100" y2="210"/>
+                  <line x1="200" y1="225" x2="270" y2="225"/>
+                  <line x1="300" y1="215" x2="380" y2="215"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__name" data-i18n="dest.greece.name">Greece</h3>
+              <p class="dest-card__desc" data-i18n="dest.greece.desc">Whitewashed Cycladic villages, sapphire Aegean waters and millennia of mythology at your feet.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.greece.meta">31 tours</span>
+                <a href="#tours" class="dest-card__link" data-i18n="dest.explore">Explore →</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="dest-card" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-label="Spain Alhambra">
+                <defs>
+                  <linearGradient id="spainSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#e8a020"/>
+                    <stop offset="50%" stop-color="#d4622a"/>
+                    <stop offset="100%" stop-color="#8b2a1a"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#spainSky)"/>
+                <!-- Alhambra palace silhouette -->
+                <g fill="#1a0a05">
+                  <rect x="60" y="140" width="280" height="140"/>
+                  <!-- Towers -->
+                  <rect x="60" y="90" width="40" height="90"/>
+                  <rect x="170" y="80" width="60" height="100"/>
+                  <rect x="300" y="95" width="40" height="85"/>
+                  <!-- Battlements -->
+                  <g>
+                    <rect x="60" y="80" width="8" height="15"/><rect x="73" y="80" width="8" height="15"/>
+                    <rect x="86" y="80" width="8" height="15"/>
+                    <rect x="170" y="68" width="8" height="15"/><rect x="183" y="68" width="8" height="15"/>
+                    <rect x="196" y="68" width="8" height="15"/><rect x="209" y="68" width="8" height="15"/>
+                    <rect x="222" y="68" width="8" height="15"/>
+                    <rect x="300" y="83" width="8" height="15"/><rect x="313" y="83" width="8" height="15"/>
+                    <rect x="326" y="83" width="8" height="15"/>
+                  </g>
+                  <!-- Arched windows -->
+                  <g fill="#3d1505">
+                    <path d="M85 155 Q95 145 105 155 L105 185 L85 185Z"/>
+                    <path d="M185 150 Q195 140 205 150 L205 180 L185 180Z"/>
+                    <path d="M215 150 Q225 140 235 150 L235 180 L215 180Z"/>
+                    <path d="M295 155 Q305 145 315 155 L315 185 L295 185Z"/>
+                  </g>
+                </g>
+                <!-- Foreground hills with prickly pear -->
+                <ellipse cx="200" cy="280" rx="250" ry="60" fill="#2d4a10"/>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__name" data-i18n="dest.spain.name">Spain</h3>
+              <p class="dest-card__desc" data-i18n="dest.spain.desc">Flamenco rhythms, Moorish palaces, sun-drenched sierras and tapas culture at its most vivid.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.spain.meta">38 tours</span>
+                <a href="#tours" class="dest-card__link" data-i18n="dest.explore">Explore →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bulgaria destination card -->
+          <article class="dest-card dest-card--large dest-card--bulgaria" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" aria-label="Bulgaria — Rila Mountains and Rose Valley">
+                <defs>
+                  <linearGradient id="bgSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#3a7bd5"/>
+                    <stop offset="55%" stop-color="#a8c8e8"/>
+                    <stop offset="100%" stop-color="#dceaf5"/>
+                  </linearGradient>
+                  <linearGradient id="bgSnow" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#f4f8fb"/>
+                    <stop offset="100%" stop-color="#d0e4f0"/>
+                  </linearGradient>
+                  <radialGradient id="bgSun" cx="80%" cy="20%" r="18%">
+                    <stop offset="0%" stop-color="#ffe87a" stop-opacity="0.55"/>
+                    <stop offset="100%" stop-color="transparent"/>
+                  </radialGradient>
+                </defs>
+                <rect width="600" height="400" fill="url(#bgSky)"/>
+                <rect width="600" height="400" fill="url(#bgSun)"/>
+                <!-- Rila mountain peaks -->
+                <polygon points="0,400 80,200 160,270 260,140 350,230 430,160 520,220 600,180 600,400" fill="#5a7a6a"/>
+                <polygon points="260,140 235,185 285,185" fill="url(#bgSnow)"/>
+                <polygon points="430,160 408,202 452,202" fill="url(#bgSnow)"/>
+                <polygon points="80,200 60,230 100,230" fill="url(#bgSnow)"/>
+                <!-- Forest belt -->
+                <polygon points="0,400 0,300 600,280 600,400" fill="#2d5a38"/>
+                <polygon points="0,400 0,330 600,310 600,400" fill="#244a30"/>
+                <!-- Bansko chalet silhouette -->
+                <g fill="#1a2d1e">
+                  <rect x="220" y="280" width="60" height="55"/>
+                  <polygon points="215,280 250,258 285,280"/>
+                  <rect x="240" y="305" width="18" height="30"/>
+                  <rect x="225" y="290" width="12" height="10"/>
+                  <rect x="260" y="290" width="12" height="10"/>
+                  <!-- Small bell tower -->
+                  <rect x="235" y="248" width="10" height="18"/>
+                  <polygon points="233,248 240,238 247,248"/>
+                </g>
+                <!-- Rose field rows (pink) -->
+                <g fill="#e8608a" opacity="0.75">
+                  <ellipse cx="100" cy="360" rx="90" ry="12"/>
+                  <ellipse cx="100" cy="375" rx="90" ry="12"/>
+                  <ellipse cx="490" cy="355" rx="90" ry="12"/>
+                  <ellipse cx="490" cy="370" rx="90" ry="12"/>
+                </g>
+                <!-- Roses on the hills -->
+                <g fill="#e8608a" opacity="0.5">
+                  <circle cx="70" cy="350" r="5"/><circle cx="90" cy="345" r="4"/>
+                  <circle cx="50" cy="355" r="4"/><circle cx="115" cy="348" r="5"/>
+                  <circle cx="480" cy="348" r="5"/><circle cx="500" cy="343" r="4"/>
+                  <circle cx="520" cy="350" r="5"/>
+                </g>
+                <!-- Orthodox cross on peak -->
+                <g stroke="white" stroke-width="1.5" opacity="0.8">
+                  <line x1="430" y1="140" x2="430" y2="152"/>
+                  <line x1="426" y1="144" x2="434" y2="144"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <span class="dest-card__badge dest-card__badge--bulgaria" data-i18n="dest.badge.hidden">Hidden Gem</span>
+              <h3 class="dest-card__name" data-i18n="dest.bulgaria.name">Bulgaria</h3>
+              <p class="dest-card__desc" data-i18n="dest.bulgaria.desc">From Rila's snow-dusted peaks to the Black Sea's golden shores — Bulgaria offers ski slopes, rose-scented valleys, ancient fortresses and mystical hot springs in one extraordinary country.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.bulgaria.meta">5 unique experiences</span>
+                <a href="#bulgaria-tours" class="dest-card__link" data-i18n="dest.bulgaria.link">Explore Bulgaria →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Bansko -->
+          <article class="dest-card" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-label="Bansko ski resort Bulgaria">
+                <defs>
+                  <linearGradient id="banskoSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a4a8a"/>
+                    <stop offset="100%" stop-color="#6aa0d4"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#banskoSky)"/>
+                <!-- Snow-covered Pirin peak -->
+                <polygon points="0,280 60,100 140,180 210,60 290,140 360,80 400,110 400,280" fill="#6a8a7a"/>
+                <polygon points="210,60 185,105 235,105" fill="white"/>
+                <polygon points="360,80 340,110 380,110" fill="white"/>
+                <polygon points="60,100 42,128 78,128" fill="white"/>
+                <!-- Snow slopes -->
+                <polygon points="0,280 0,180 400,160 400,280" fill="white" opacity="0.85"/>
+                <!-- Ski runs (coloured lines) -->
+                <g stroke="#e03030" stroke-width="3" fill="none" opacity="0.7">
+                  <path d="M210 105 Q220 150 200 200 Q190 230 200 280"/>
+                </g>
+                <g stroke="#1a7a1a" stroke-width="3" fill="none" opacity="0.7">
+                  <path d="M210 105 Q240 155 260 200 Q270 235 265 280"/>
+                </g>
+                <!-- Cable car towers -->
+                <g stroke="#555" stroke-width="2" fill="none">
+                  <line x1="120" y1="220" x2="120" y2="175"/>
+                  <line x1="165" y1="205" x2="165" y2="162"/>
+                  <line x1="210" y1="190" x2="210" y2="148"/>
+                  <path d="M115 175 L120 175 L125 175"/>
+                  <path d="M160 162 L165 162 L170 162"/>
+                  <path d="M205 148 L210 148 L215 148"/>
+                  <!-- Gondola cabins -->
+                  <rect x="130" y="182" width="12" height="9" rx="2" fill="#e8382a" stroke="none"/>
+                  <rect x="178" y="168" width="12" height="9" rx="2" fill="#e8382a" stroke="none"/>
+                </g>
+                <!-- Chalet at base -->
+                <g fill="#8b5e3c">
+                  <rect x="300" y="230" width="70" height="40"/>
+                  <polygon points="296,230 335,210 374,230" fill="#7a5030"/>
+                </g>
+                <rect x="316" y="248" width="16" height="22" fill="#2a1a0a"/>
+                <!-- Fir trees -->
+                <g fill="#1a4a22">
+                  <polygon points="355,225 362,200 369,225"/>
+                  <polygon points="345,230 353,202 361,230"/>
+                  <polygon points="20,250 28,222 36,250"/>
+                  <polygon points="35,245 43,218 51,245"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__name" data-i18n="dest.bansko.name">Bansko</h3>
+              <p class="dest-card__desc" data-i18n="dest.bansko.desc">World-class Pirin slopes in winter; wildflower meadows and alpine trails in summer. Bulgaria's ultimate four-season mountain resort.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.bansko.meta">Ski &amp; Hiking</span>
+                <a href="#bulgaria-tours" class="dest-card__link">Explore →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Melnik -->
+          <article class="dest-card" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-label="Melnik wine region Bulgaria">
+                <defs>
+                  <linearGradient id="melnikSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#c05a18"/>
+                    <stop offset="40%" stop-color="#e89040"/>
+                    <stop offset="100%" stop-color="#f4c87a"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#melnikSky)"/>
+                <!-- Sandstone pyramids (Melnik's signature landscape) -->
+                <g fill="#d4924a">
+                  <polygon points="0,280 40,140 80,200 120,100 160,180 180,130 210,160 240,90 280,150 310,110 350,160 380,120 400,140 400,280"/>
+                </g>
+                <g fill="#c07830">
+                  <polygon points="0,280 0,200 40,140 80,200 120,100 160,180 180,130 210,160 240,90 280,150 310,110 350,160 400,140 400,280"/>
+                </g>
+                <!-- Vineyard terraces -->
+                <g stroke="#5a3a10" stroke-width="1.5" fill="none" opacity="0.7">
+                  <path d="M0 240 Q100 230 200 238 Q300 246 400 240"/>
+                  <path d="M0 255 Q100 245 200 252 Q300 260 400 255"/>
+                </g>
+                <!-- Grape clusters -->
+                <g fill="#6a2a6a" opacity="0.8">
+                  <circle cx="40" cy="248" r="4"/><circle cx="48" cy="244" r="4"/>
+                  <circle cx="36" cy="244" r="4"/><circle cx="44" cy="252" r="4"/>
+                  <circle cx="160" cy="246" r="4"/><circle cx="168" cy="242" r="4"/>
+                  <circle cx="156" cy="242" r="4"/><circle cx="164" cy="250" r="4"/>
+                  <circle cx="300" cy="247" r="4"/><circle cx="308" cy="243" r="4"/>
+                  <circle cx="296" cy="243" r="4"/><circle cx="304" cy="251" r="4"/>
+                </g>
+                <!-- Wine cellar entrance -->
+                <g fill="#3a2010">
+                  <rect x="170" y="195" width="60" height="65"/>
+                  <path d="M170 195 Q200 178 230 195" fill="#3a2010"/>
+                  <!-- Barrel hint -->
+                  <ellipse cx="200" cy="235" rx="18" ry="22" stroke="#7a5020" stroke-width="2" fill="#5a3010"/>
+                  <line x1="182" y1="235" x2="218" y2="235" stroke="#7a5020" stroke-width="1.5"/>
+                  <line x1="182" y1="228" x2="218" y2="228" stroke="#7a5020" stroke-width="1"/>
+                  <line x1="182" y1="242" x2="218" y2="242" stroke="#7a5020" stroke-width="1"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__name" data-i18n="dest.melnik.name">Melnik</h3>
+              <p class="dest-card__desc" data-i18n="dest.melnik.desc">Bulgaria's smallest town, cradled in dramatic sandstone pyramids and home to centuries-old wine cellars producing legendary Shiroka Melnishka Loza.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.melnik.meta">Wine &amp; Culture</span>
+                <a href="#bulgaria-tours" class="dest-card__link">Explore →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Rupite -->
+          <article class="dest-card" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-label="Rupite hot springs Bulgaria">
+                <defs>
+                  <linearGradient id="rupiteSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2a5a4a"/>
+                    <stop offset="60%" stop-color="#4a8a6a"/>
+                    <stop offset="100%" stop-color="#7ab88a"/>
+                  </linearGradient>
+                  <radialGradient id="steamGrad" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="white" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="white" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#rupiteSky)"/>
+                <!-- Kozhuh volcanic hill -->
+                <ellipse cx="330" cy="200" rx="120" ry="90" fill="#3a5a30"/>
+                <ellipse cx="330" cy="185" rx="80" ry="55" fill="#4a6a3a"/>
+                <!-- Hot springs pool -->
+                <ellipse cx="180" cy="220" rx="100" ry="35" fill="#4ab8a8" opacity="0.85"/>
+                <ellipse cx="180" cy="218" rx="95" ry="30" fill="#5ac8b8" opacity="0.6"/>
+                <!-- Steam wisps -->
+                <g fill="url(#steamGrad)">
+                  <ellipse cx="140" cy="195" rx="15" ry="25" opacity="0.5"/>
+                  <ellipse cx="175" cy="188" rx="12" ry="22" opacity="0.4"/>
+                  <ellipse cx="210" cy="193" rx="14" ry="24" opacity="0.45"/>
+                  <ellipse cx="245" cy="196" rx="10" ry="18" opacity="0.35"/>
+                </g>
+                <!-- Baba Vanga church (small white chapel) -->
+                <g fill="white">
+                  <rect x="50" y="160" width="55" height="65"/>
+                  <polygon points="45,160 77,138 110,160" fill="#e0e0e0"/>
+                  <!-- Bell tower -->
+                  <rect x="63" y="130" width="16" height="32"/>
+                  <polygon points="61,130 71,118 81,130" fill="#d4d0d0"/>
+                  <!-- Cross -->
+                  <line x1="71" y1="112" x2="71" y2="120" stroke="#888" stroke-width="2"/>
+                  <line x1="68" y1="115" x2="74" y2="115" stroke="#888" stroke-width="2"/>
+                  <!-- Windows -->
+                  <rect x="58" y="173" width="12" height="14" rx="6" fill="#8ab0c4"/>
+                  <rect x="82" y="173" width="12" height="14" rx="6" fill="#8ab0c4"/>
+                  <!-- Door -->
+                  <rect x="67" y="200" width="18" height="25" rx="9" fill="#8ab0c4"/>
+                </g>
+                <!-- Surrounding greenery -->
+                <g fill="#2a4a28">
+                  <polygon points="0,260 10,232 20,260"/>
+                  <polygon points="15,265 27,234 39,265"/>
+                  <polygon points="370,255 380,228 390,255"/>
+                  <polygon points="355,260 367,230 379,260"/>
+                </g>
+                <!-- Small path to church -->
+                <path d="M110 225 Q120 218 130 210 Q135 205 105 220" stroke="#d4b870" stroke-width="3" fill="none" stroke-dasharray="4,4" opacity="0.7"/>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__name" data-i18n="dest.rupite.name">Rupite</h3>
+              <p class="dest-card__desc" data-i18n="dest.rupite.desc">A place of quiet mysticism — Baba Vanga's beloved chapel, therapeutic mineral hot springs and the volcanic Kozhuh hill in the shadow of Belasitsa Mountain.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.rupite.meta">Wellness &amp; Mysticism</span>
+                <a href="#bulgaria-tours" class="dest-card__link">Explore →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Varna -->
+          <article class="dest-card" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-label="Varna Black Sea Bulgaria">
+                <defs>
+                  <linearGradient id="varnaSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2a7fd4"/>
+                    <stop offset="55%" stop-color="#5aaae8"/>
+                    <stop offset="100%" stop-color="#a8d4f4"/>
+                  </linearGradient>
+                  <linearGradient id="varnaWater" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a5aa0"/>
+                    <stop offset="100%" stop-color="#0d3a70"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#varnaSky)"/>
+                <!-- Black Sea -->
+                <rect x="0" y="170" width="400" height="110" fill="url(#varnaWater)"/>
+                <!-- Beach strip -->
+                <rect x="0" y="158" width="400" height="20" fill="#e8d870"/>
+                <!-- Sea sparkle -->
+                <g stroke="white" stroke-width="1" opacity="0.35">
+                  <line x1="30" y1="190" x2="80" y2="188"/>
+                  <line x1="120" y1="200" x2="190" y2="197"/>
+                  <line x1="230" y1="185" x2="300" y2="183"/>
+                  <line x1="340" y1="195" x2="390" y2="193"/>
+                  <line x1="60" y1="215" x2="110" y2="213"/>
+                  <line x1="200" y1="220" x2="270" y2="218"/>
+                </g>
+                <!-- Waterfront promenade buildings -->
+                <g fill="#d4b880">
+                  <rect x="0" y="90" width="55" height="70"/>
+                  <rect x="60" y="80" width="50" height="80"/>
+                  <rect x="115" y="95" width="45" height="65"/>
+                  <rect x="165" y="70" width="60" height="90"/>
+                  <rect x="230" y="85" width="50" height="75"/>
+                  <rect x="285" y="78" width="55" height="82"/>
+                  <rect x="345" y="92" width="55" height="68"/>
+                </g>
+                <!-- Roof lines -->
+                <g fill="#a08040">
+                  <polygon points="0,90 27,74 55,90"/>
+                  <polygon points="60,80 85,62 110,80"/>
+                  <polygon points="165,70 195,50 225,70"/>
+                  <polygon points="285,78 312,60 340,78"/>
+                </g>
+                <!-- Beach umbrellas -->
+                <g>
+                  <ellipse cx="80" cy="162" rx="12" ry="5" fill="#e83030" opacity="0.8"/>
+                  <line x1="80" y1="162" x2="80" y2="175" stroke="#888" stroke-width="1.5"/>
+                  <ellipse cx="160" cy="160" rx="12" ry="5" fill="#3030e8" opacity="0.8"/>
+                  <line x1="160" y1="160" x2="160" y2="173" stroke="#888" stroke-width="1.5"/>
+                  <ellipse cx="260" cy="162" rx="12" ry="5" fill="#30a830" opacity="0.8"/>
+                  <line x1="260" y1="162" x2="260" y2="175" stroke="#888" stroke-width="1.5"/>
+                  <ellipse cx="330" cy="160" rx="12" ry="5" fill="#e8a030" opacity="0.8"/>
+                  <line x1="330" y1="160" x2="330" y2="173" stroke="#888" stroke-width="1.5"/>
+                </g>
+                <!-- Seagulls -->
+                <g stroke="white" stroke-width="1.2" fill="none" opacity="0.7">
+                  <path d="M100 55 Q105 50 110 55"/>
+                  <path d="M130 42 Q136 37 142 42"/>
+                  <path d="M310 48 Q315 43 320 48"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__name" data-i18n="dest.varna.name">Varna</h3>
+              <p class="dest-card__desc" data-i18n="dest.varna.desc">The pearl of the Black Sea — golden sandy beaches, Roman thermae, a stunning cathedral and a vibrant seaside promenade alive until dawn.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.varna.meta">Beach &amp; History</span>
+                <a href="#bulgaria-tours" class="dest-card__link">Explore →</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Veliko Turnovo -->
+          <article class="dest-card" tabindex="0">
+            <div class="dest-card__image">
+              <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" aria-label="Veliko Turnovo Bulgaria medieval fortress">
+                <defs>
+                  <linearGradient id="vtSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a2d5a"/>
+                    <stop offset="60%" stop-color="#3a5a9a"/>
+                    <stop offset="100%" stop-color="#6a8ac4"/>
+                  </linearGradient>
+                </defs>
+                <rect width="400" height="280" fill="url(#vtSky)"/>
+                <!-- Yantra river gorge -->
+                <path d="M0 280 Q40 200 80 220 Q120 240 160 210 Q200 180 240 200 Q280 220 320 195 Q360 170 400 185 L400 280Z" fill="#1a4a2a"/>
+                <!-- River Yantra (winding) -->
+                <path d="M0 280 Q50 240 80 255 Q120 270 160 250 Q200 230 240 245 Q280 260 320 245 Q360 230 400 240 L400 280Z" fill="#2a6a9a" opacity="0.7"/>
+                <!-- Tsarevets fortress walls and towers on the hill -->
+                <g fill="#c4a060">
+                  <!-- Main hill -->
+                  <ellipse cx="200" cy="160" rx="130" ry="70" fill="#8a6a30"/>
+                  <!-- Fortress walls -->
+                  <rect x="110" y="130" width="180" height="55" fill="#c4a060" rx="2"/>
+                  <!-- Battlements along wall -->
+                  <g fill="#c4a060">
+                    <rect x="110" y="118" width="8" height="14"/><rect x="122" y="118" width="8" height="14"/>
+                    <rect x="134" y="118" width="8" height="14"/><rect x="146" y="118" width="8" height="14"/>
+                    <rect x="158" y="118" width="8" height="14"/><rect x="170" y="118" width="8" height="14"/>
+                    <rect x="182" y="118" width="8" height="14"/><rect x="194" y="118" width="8" height="14"/>
+                    <rect x="206" y="118" width="8" height="14"/><rect x="218" y="118" width="8" height="14"/>
+                    <rect x="230" y="118" width="8" height="14"/><rect x="242" y="118" width="8" height="14"/>
+                    <rect x="254" y="118" width="8" height="14"/><rect x="266" y="118" width="8" height="14"/>
+                    <rect x="278" y="118" width="8" height="14"/>
+                  </g>
+                  <!-- Baldwin's Tower (main keep) -->
+                  <rect x="175" y="80" width="50" height="55"/>
+                  <rect x="173" y="68" width="8" height="15"/><rect x="185" y="68" width="8" height="15"/>
+                  <rect x="197" y="68" width="8" height="15"/><rect x="209" y="68" width="8" height="15"/>
+                  <rect x="221" y="68" width="8" height="15"/>
+                  <!-- Small chapel on top of tower -->
+                  <rect x="188" y="52" width="24" height="20"/>
+                  <polygon points="186,52 200,38 214,52" fill="#d4b870"/>
+                  <!-- Cross -->
+                  <line x1="200" y1="32" x2="200" y2="40" stroke="white" stroke-width="2"/>
+                  <line x1="196" y1="35" x2="204" y2="35" stroke="white" stroke-width="2"/>
+                  <!-- Gate tower left -->
+                  <rect x="118" y="100" width="30" height="45"/>
+                  <rect x="116" y="88" width="8" height="14"/><rect x="128" y="88" width="8" height="14"/>
+                  <rect x="140" y="88" width="8" height="14"/>
+                  <!-- Gate tower right -->
+                  <rect x="252" y="100" width="30" height="45"/>
+                  <rect x="250" y="88" width="8" height="14"/><rect x="262" y="88" width="8" height="14"/>
+                  <rect x="274" y="88" width="8" height="14"/>
+                  <!-- Gate arch -->
+                  <path d="M195 185 Q200 175 205 185 L205 185 L195 185Z" fill="#8a5a20"/>
+                </g>
+                <!-- Medieval houses on the hillside -->
+                <g fill="#c4a870" opacity="0.7">
+                  <rect x="60" y="200" width="30" height="28"/>
+                  <polygon points="57,200 75,186 93,200" fill="#a08040"/>
+                  <rect x="310" y="195" width="35" height="32"/>
+                  <polygon points="307,195 327,180 348,195" fill="#a08040"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dest-card__body">
+              <h3 class="dest-card__name" data-i18n="dest.vturnovo.name">Veliko Turnovo</h3>
+              <p class="dest-card__desc" data-i18n="dest.vturnovo.desc">The medieval capital of the Second Bulgarian Empire — Tsarevets fortress, cobblestone Samovodska Charshiya and dramatic gorges of the Yantra river.</p>
+              <div class="dest-card__meta">
+                <span data-i18n="dest.vturnovo.meta">Heritage &amp; History</span>
+                <a href="#bulgaria-tours" class="dest-card__link">Explore →</a>
+              </div>
+            </div>
+          </article>
+
+
+        </div>
+
+        <div class="destinations__footer">
+          <button class="btn btn--primary" data-i18n="dest.viewAll">View All 47 Destinations</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TOURS SHOWCASE ========== -->
+    <section class="section tours" id="tours">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow" data-i18n="tours.eyebrow">Our Journeys</p>
+          <h2 class="section__title" data-i18n="tours.title">Featured Tours</h2>
+          <p class="section__sub" data-i18n="tours.sub">Meticulously planned itineraries that reveal the authentic soul of each destination.</p>
+        </header>
+
+        <div class="tour-filters">
+          <button class="filter-btn active" data-filter="all" data-i18n="tours.filter.all">All Tours</button>
+          <button class="filter-btn" data-filter="cultural" data-i18n="tours.filter.cultural">Cultural</button>
+          <button class="filter-btn" data-filter="adventure" data-i18n="tours.filter.adventure">Adventure</button>
+          <button class="filter-btn" data-filter="culinary" data-i18n="tours.filter.culinary">Culinary</button>
+          <button class="filter-btn" data-filter="luxury" data-i18n="tours.filter.luxury">Luxury</button>
+          <button class="filter-btn" data-filter="bulgaria" data-i18n="tours.filter.bulgaria">Bulgaria</button>
+        </div>
+
+        <div class="tours__grid" id="toursGrid">
+
+          <article class="tour-card" data-category="cultural luxury" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="380" height="220" fill="#1a3a6e"/>
+                <g fill="#c4a872">
+                  <rect x="140" y="60" width="100" height="120"/>
+                  <polygon points="130,60 190,20 250,60" fill="#d4b882"/>
+                  <g fill="#1a3a6e">
+                    <rect x="160" y="80" width="20" height="25"/><rect x="200" y="80" width="20" height="25"/>
+                    <rect x="160" y="120" width="20" height="20"/><rect x="200" y="120" width="20" height="20"/>
+                    <rect x="178" y="145" width="24" height="35"/>
+                  </g>
+                  <circle cx="190" cy="42" r="8" fill="#e8c870"/>
+                </g>
+                <path d="M0 180 Q190 160 380 180 L380 220 L0 220Z" fill="#0a2040"/>
+              </svg>
+              <span class="tour-card__tag">Cultural</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.greece.duration">12 days</span>
+                <span class="tour-card__location" data-i18n="tour.greece.location">Greece</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.greece.title">Classical Greece: Athens to Delphi</h3>
+              <p class="tour-card__desc" data-i18n="tour.greece.desc">Walk in the footsteps of Socrates and Pericles. The Acropolis, the Oracle at Delphi, the ruins of Mycenae.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€2,890</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="culinary cultural" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="380" height="220" fill="#e8c870"/>
+                <ellipse cx="190" cy="180" rx="250" ry="80" fill="#6b8c3e"/>
+                <ellipse cx="190" cy="200" rx="200" ry="60" fill="#5a7830"/>
+                <!-- Vineyard rows -->
+                <g stroke="#4a6820" stroke-width="2" fill="none">
+                  <line x1="0" y1="170" x2="380" y2="150"/>
+                  <line x1="0" y1="185" x2="380" y2="165"/>
+                  <line x1="0" y1="200" x2="380" y2="180"/>
+                </g>
+                <!-- Wine chateau -->
+                <g fill="#c4a060">
+                  <rect x="160" y="110" width="60" height="60"/>
+                  <polygon points="155,110 190,88 225,110" fill="#a07040"/>
+                  <rect x="150" y="80" width="15" height="40"/>
+                  <rect x="215" y="80" width="15" height="40"/>
+                </g>
+                <!-- Sun -->
+                <circle cx="340" cy="50" r="30" fill="#f5c840" opacity="0.8"/>
+                <g stroke="#f5c840" stroke-width="2" opacity="0.5">
+                  <line x1="340" y1="10" x2="340" y2="0"/>
+                  <line x1="370" y1="20" x2="378" y2="12"/>
+                  <line x1="380" y1="50" x2="390" y2="50"/>
+                </g>
+              </svg>
+              <span class="tour-card__tag">Culinary</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.burgundy.duration">9 days</span>
+                <span class="tour-card__location" data-i18n="tour.burgundy.location">France</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.burgundy.title">Burgundy Wine &amp; Gastronomy</h3>
+              <p class="tour-card__desc" data-i18n="tour.burgundy.desc">Premier cru vineyards, Michelin-starred kitchens, village markets and cellar tastings in the heart of Burgundy.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€3,490</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="adventure" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="380" height="220" fill="#7ab8d4"/>
+                <polygon points="0,220 90,80 180,160 270,40 380,120 380,220" fill="#4a7a9a"/>
+                <polygon points="90,80 70,110 110,110" fill="white"/>
+                <polygon points="270,40 248,75 292,75" fill="white"/>
+                <polygon points="0,220 0,120 380,120 380,220" fill="#3a6a8a"/>
+                <g fill="#2d4a1e">
+                  <polygon points="40,170 50,140 60,170"/>
+                  <polygon points="320,165 332,132 344,165"/>
+                  <polygon points="300,175 314,138 328,175"/>
+                </g>
+                <path d="M0 195 Q190 180 380 195" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+              </svg>
+              <span class="tour-card__tag tour-card__tag--green">Adventure</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.alps.duration">14 days</span>
+                <span class="tour-card__location" data-i18n="tour.alps.location">Switzerland · Austria</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.alps.title">Alpine Traverse: Haute Route</h3>
+              <p class="tour-card__desc" data-i18n="tour.alps.desc">The legendary high-altitude route from Chamonix to Zermatt — glaciers, wildflower meadows and mountain huts.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€2,190</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="luxury cultural" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="380" height="220" fill="#1e3a6e"/>
+                <!-- Venice canal -->
+                <rect x="120" y="100" width="140" height="120" fill="#1a5a8a"/>
+                <!-- Gondola -->
+                <ellipse cx="190" cy="185" rx="45" ry="12" fill="#1a1a1a"/>
+                <path d="M148 185 Q190 175 232 185" stroke="#c4a830" stroke-width="2" fill="none"/>
+                <!-- Buildings -->
+                <g fill="#d4b880">
+                  <rect x="0" y="60" width="120" height="160"/>
+                  <rect x="260" y="70" width="120" height="150"/>
+                </g>
+                <!-- Arch windows -->
+                <g fill="#2a5a8a">
+                  <path d="M20 90 Q35 75 50 90 L50 125 L20 125Z"/>
+                  <path d="M65 90 Q80 75 95 90 L95 125 L65 125Z"/>
+                  <path d="M275 85 Q290 70 305 85 L305 120 L275 120Z"/>
+                  <path d="M320 85 Q335 70 350 85 L350 120 L320 120Z"/>
+                </g>
+                <!-- Bridge -->
+                <path d="M120 130 Q190 110 260 130" stroke="#d4b880" stroke-width="8" fill="none"/>
+                <path d="M125 130 Q190 112 255 130" stroke="#c4a870" stroke-width="4" fill="none" opacity="0.5"/>
+              </svg>
+              <span class="tour-card__tag tour-card__tag--gold">Luxury</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.venice.duration">10 days</span>
+                <span class="tour-card__location" data-i18n="tour.venice.location">Italy</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.venice.title">Venice &amp; the Veneto in Style</h3>
+              <p class="tour-card__desc" data-i18n="tour.venice.desc">Private gondola rides, palazzo hotel stays, exclusive glass-blowing on Murano and Prosecco hills at sunset.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€5,200</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="adventure cultural" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="380" height="220" fill="#2a4a1e"/>
+                <!-- Northern lights -->
+                <defs>
+                  <linearGradient id="aurora" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#00c896" stop-opacity="0.7"/>
+                    <stop offset="50%" stop-color="#4040ff" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="#00c896" stop-opacity="0.3"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0 60 Q95 40 190 80 Q285 120 380 40 L380 0 L0 0Z" fill="url(#aurora)" opacity="0.8"/>
+                <path d="M0 100 Q95 60 190 100 Q285 140 380 80 L380 20 L0 20Z" fill="#00c896" opacity="0.3"/>
+                <!-- Fjord water -->
+                <path d="M0 160 Q190 140 380 160 L380 220 L0 220Z" fill="#0a3060"/>
+                <!-- Mountains -->
+                <polygon points="0,220 60,100 120,160 200,80 280,140 340,100 380,130 380,220" fill="#1a3010"/>
+                <!-- Pine trees on slope -->
+                <g fill="#0a2010">
+                  <polygon points="30,190 38,165 46,190"/>
+                  <polygon points="330,185 338,160 346,185"/>
+                  <polygon points="350,188 358,163 366,188"/>
+                </g>
+              </svg>
+              <span class="tour-card__tag tour-card__tag--green">Adventure</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.nordic.duration">8 days</span>
+                <span class="tour-card__location" data-i18n="tour.nordic.location">Norway · Iceland</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.nordic.title">Nordic Fjords &amp; Northern Lights</h3>
+              <p class="tour-card__desc" data-i18n="tour.nordic.desc">Dramatic fjord landscapes, Viking heritage and the ethereal wonder of the aurora borealis above the Arctic circle.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€3,150</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="culinary luxury" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <rect width="380" height="220" fill="#c07030"/>
+                <ellipse cx="190" cy="200" rx="250" ry="70" fill="#8b2a10"/>
+                <!-- Alhambra-style arch -->
+                <rect x="100" y="50" width="180" height="160" fill="#d4905a"/>
+                <path d="M100 130 Q190 80 280 130" fill="#c47a4a"/>
+                <!-- Geometric tile pattern hint -->
+                <g fill="#e8b870" opacity="0.5">
+                  <polygon points="190,55 205,75 190,95 175,75"/>
+                  <polygon points="190,75 205,95 190,115 175,95"/>
+                </g>
+                <!-- Doorway -->
+                <path d="M150 210 L150 130 Q190 100 230 130 L230 210Z" fill="#3d1505"/>
+                <!-- Fountain -->
+                <circle cx="190" cy="185" r="20" fill="#1a6a9a" opacity="0.6"/>
+                <line x1="190" y1="165" x2="190" y2="145" stroke="#7ab0d4" stroke-width="2"/>
+                <!-- Orange trees -->
+                <circle cx="70" cy="150" r="25" fill="#3d7a20"/>
+                <circle cx="310" cy="150" r="25" fill="#3d7a20"/>
+                <g fill="#e87820">
+                  <circle cx="65" cy="148" r="4"/><circle cx="75" cy="143" r="3"/>
+                  <circle cx="70" cy="158" r="3"/><circle cx="305" cy="148" r="4"/>
+                  <circle cx="315" cy="143" r="3"/>
+                </g>
+              </svg>
+              <span class="tour-card__tag">Culinary</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.andalucia.duration">11 days</span>
+                <span class="tour-card__location" data-i18n="tour.andalucia.location">Spain</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.andalucia.title">Andalucía: Moorish Heritage &amp; Tapas</h3>
+              <p class="tour-card__desc" data-i18n="tour.andalucia.desc">Granada's Alhambra, Córdoba's Mezquita, Sevilla's flamenco nights and the finest jamón ibérico you'll ever taste.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€2,650</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- ── BULGARIA TOURS ── -->
+          <div class="bulgaria-tours-header" id="bulgaria-tours">
+            <div class="bulgaria-tours-label">
+              <svg width="22" height="22" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                <rect width="36" height="12" fill="#ffffff"/>
+                <rect y="12" width="36" height="12" fill="#4aa04a"/>
+                <rect y="24" width="36" height="12" fill="#e83030"/>
+              </svg>
+              <span data-i18n="tours.bulgaria.label">Bulgaria Collection</span>
+            </div>
+          </div>
+
+          <article class="tour-card" data-category="adventure bulgaria" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="banskoTourBg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2a5aaa"/>
+                    <stop offset="100%" stop-color="#6a9ad4"/>
+                  </linearGradient>
+                </defs>
+                <rect width="380" height="220" fill="url(#banskoTourBg)"/>
+                <!-- Pirin peak with snow -->
+                <polygon points="0,220 60,80 130,140 200,50 270,120 340,70 380,100 380,220" fill="#5a7a6a"/>
+                <polygon points="200,50 178,88 222,88" fill="white"/>
+                <polygon points="340,70 322,100 358,100" fill="white"/>
+                <!-- Snow ground -->
+                <rect x="0" y="155" width="380" height="65" fill="white" opacity="0.9"/>
+                <!-- Skier figure -->
+                <g transform="translate(180, 158)">
+                  <circle cx="0" cy="-8" r="6" fill="#e83030"/>
+                  <line x1="0" y1="-2" x2="-8" y2="10" stroke="#c82010" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="0" y1="-2" x2="8" y2="10" stroke="#c82010" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="-8" y1="10" x2="-18" y2="8" stroke="#888" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="8" y1="10" x2="18" y2="8" stroke="#888" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Ski poles -->
+                  <line x1="-4" y1="2" x2="-14" y2="14" stroke="#555" stroke-width="1.5"/>
+                  <line x1="4" y1="2" x2="14" y2="14" stroke="#555" stroke-width="1.5"/>
+                </g>
+                <!-- Pine trees at base -->
+                <g fill="#1a3a18">
+                  <polygon points="20,170 28,145 36,170"/>
+                  <polygon points="32,175 42,147 52,175"/>
+                  <polygon points="330,168 338,143 346,168"/>
+                  <polygon points="344,172 354,146 364,172"/>
+                </g>
+              </svg>
+              <span class="tour-card__tag tour-card__tag--green">Adventure</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.bansko.duration">7 days</span>
+                <span class="tour-card__location" data-i18n="tour.bansko.location">Bansko, Bulgaria</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.bansko.title">Bansko Ski Week in the Pirin</h3>
+              <p class="tour-card__desc" data-i18n="tour.bansko.desc">Full lift-pass access to 75 km of Pirin runs, ski school, après-ski at traditional mehanas and a night in a 300-year-old Bulgarian chalet.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€1,290</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="adventure bulgaria" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="banHikeBg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#5a9a4a"/>
+                    <stop offset="100%" stop-color="#a8d48a"/>
+                  </linearGradient>
+                </defs>
+                <rect width="380" height="220" fill="url(#banHikeBg)"/>
+                <!-- Pirin summer peaks -->
+                <polygon points="0,220 60,90 130,150 200,60 270,130 340,75 380,105 380,220" fill="#4a6a3a"/>
+                <polygon points="200,60 182,95 218,95" fill="#d4e4c0"/>
+                <!-- Alpine meadow -->
+                <ellipse cx="190" cy="185" rx="200" ry="50" fill="#5aaa40"/>
+                <!-- Wildflowers -->
+                <g>
+                  <circle cx="60" cy="178" r="4" fill="#e8e840"/>
+                  <circle cx="100" cy="182" r="4" fill="#e840a0"/>
+                  <circle cx="130" cy="176" r="4" fill="#e8e840"/>
+                  <circle cx="180" cy="180" r="4" fill="#e840a0"/>
+                  <circle cx="260" cy="175" r="4" fill="#e8e840"/>
+                  <circle cx="300" cy="180" r="4" fill="#e840a0"/>
+                  <circle cx="340" cy="177" r="4" fill="#e8e840"/>
+                </g>
+                <!-- Hiker silhouette -->
+                <g transform="translate(210, 160)" fill="#1a2a10">
+                  <circle cx="0" cy="-14" r="7"/>
+                  <line x1="0" y1="-7" x2="-6" y2="6" stroke="#1a2a10" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="0" y1="-7" x2="6" y2="6" stroke="#1a2a10" stroke-width="3" stroke-linecap="round"/>
+                  <line x1="-6" y1="6" x2="-4" y2="18" stroke="#1a2a10" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="6" y1="6" x2="4" y2="18" stroke="#1a2a10" stroke-width="2.5" stroke-linecap="round"/>
+                  <!-- hiking pole -->
+                  <line x1="-4" y1="0" x2="-14" y2="18" stroke="#8a6a40" stroke-width="2"/>
+                </g>
+                <!-- Mountain lake -->
+                <ellipse cx="120" cy="165" rx="40" ry="14" fill="#4a8ab4" opacity="0.7"/>
+                <!-- Rila monastery hint at distance -->
+                <g fill="#c4a060" opacity="0.6" transform="translate(295,120)">
+                  <rect x="0" y="0" width="28" height="30"/>
+                  <polygon points="-2,0 14,-12 30,0"/>
+                  <ellipse cx="14" cy="-5" rx="6" ry="4" fill="#1a6ab4" opacity="0.8"/>
+                </g>
+              </svg>
+              <span class="tour-card__tag tour-card__tag--green">Adventure</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.hike.duration">6 days</span>
+                <span class="tour-card__location" data-i18n="tour.hike.location">Bansko &amp; Rila, Bulgaria</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.hike.title">Pirin &amp; Rila Highland Trek</h3>
+              <p class="tour-card__desc" data-i18n="tour.hike.desc">Summer alpine hiking through Pirin's wildflower meadows, glacial lakes and the UNESCO-listed Rila Monastery hidden in a wooded gorge.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€990</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="culinary bulgaria" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="melnikTourBg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#b04a10"/>
+                    <stop offset="60%" stop-color="#e88040"/>
+                    <stop offset="100%" stop-color="#f4b860"/>
+                  </linearGradient>
+                </defs>
+                <rect width="380" height="220" fill="url(#melnikTourBg)"/>
+                <!-- Sandstone pyramids -->
+                <polygon points="0,220 35,100 80,165 130,70 175,140 210,90 250,130 285,75 330,130 365,85 380,105 380,220" fill="#c07830"/>
+                <polygon points="0,220 0,165 35,100 80,165 130,70 175,140 210,90 250,130 285,75 380,105 380,220" fill="#a86220"/>
+                <!-- Vineyard rows -->
+                <g stroke="#5a3010" stroke-width="2" fill="none" opacity="0.8">
+                  <path d="M0 190 Q95 180 190 188 Q285 196 380 190"/>
+                  <path d="M0 205 Q95 195 190 202 Q285 210 380 205"/>
+                </g>
+                <!-- Wine glasses clinking -->
+                <g transform="translate(160, 140)" stroke="#d4b870" stroke-width="2" fill="none">
+                  <path d="M0 0 Q-8 20 -5 35 L5 35 Q8 20 0 0Z" fill="#c88040" stroke="none" opacity="0.8"/>
+                  <path d="M20 0 Q28 20 25 35 L35 35 Q32 20 20 0Z" fill="#c88040" stroke="none" opacity="0.8"/>
+                  <line x1="-5" y1="35" x2="5" y2="35"/>
+                  <line x1="25" y1="35" x2="35" y2="35"/>
+                  <line x1="0" y1="35" x2="0" y2="50"/>
+                  <line x1="30" y1="35" x2="30" y2="50"/>
+                  <!-- clink lines -->
+                  <line x1="8" y1="5" x2="13" y2="2" stroke="white" stroke-width="1.5"/>
+                  <line x1="10" y1="10" x2="16" y2="8" stroke="white" stroke-width="1.5"/>
+                </g>
+                <!-- Old cellar door -->
+                <g fill="#2a1008">
+                  <rect x="290" y="155" width="50" height="55"/>
+                  <path d="M290 155 Q315 140 340 155" fill="#2a1008"/>
+                  <path d="M293 155 Q315 142 337 155" stroke="#5a3010" stroke-width="1.5" fill="none"/>
+                </g>
+              </svg>
+              <span class="tour-card__tag">Culinary</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.melnik.duration">4 days</span>
+                <span class="tour-card__location" data-i18n="tour.melnik.location">Melnik &amp; Sandanski, Bulgaria</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.melnik.title">Melnik Wine &amp; Sandstone Trail</h3>
+              <p class="tour-card__desc" data-i18n="tour.melnik.desc">Cellar tastings of Shiroka Melnishka Loza directly with the winemakers, a guided walk through the bizarre sandstone pyramids and a feast of Macedonian cuisine.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€780</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="cultural bulgaria" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="rupiteTourBg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#2a4a3a"/>
+                    <stop offset="100%" stop-color="#5a8a6a"/>
+                  </linearGradient>
+                  <radialGradient id="steamR" cx="50%" cy="60%" r="45%">
+                    <stop offset="0%" stop-color="white" stop-opacity="0.4"/>
+                    <stop offset="100%" stop-color="transparent"/>
+                  </radialGradient>
+                </defs>
+                <rect width="380" height="220" fill="url(#rupiteTourBg)"/>
+                <!-- Kozhuh hill -->
+                <ellipse cx="300" cy="160" rx="120" ry="80" fill="#3a5a30"/>
+                <!-- Hot springs pool -->
+                <ellipse cx="160" cy="170" rx="110" ry="38" fill="#3ab4a0" opacity="0.85"/>
+                <ellipse cx="160" cy="165" rx="100" ry="30" fill="#50c8b0" opacity="0.5"/>
+                <!-- Steam -->
+                <ellipse cx="120" cy="143" rx="18" ry="28" fill="url(#steamR)"/>
+                <ellipse cx="160" cy="138" rx="15" ry="25" fill="url(#steamR)"/>
+                <ellipse cx="200" cy="143" rx="18" ry="28" fill="url(#steamR)"/>
+                <!-- Bathers silhouettes -->
+                <g fill="#1a2a20" opacity="0.6">
+                  <circle cx="110" cy="162" r="8"/>
+                  <ellipse cx="110" cy="175" rx="10" ry="6"/>
+                  <circle cx="160" cy="160" r="8"/>
+                  <ellipse cx="160" cy="173" rx="10" ry="6"/>
+                  <circle cx="210" cy="162" r="8"/>
+                  <ellipse cx="210" cy="175" rx="10" ry="6"/>
+                </g>
+                <!-- Chapel -->
+                <g fill="white">
+                  <rect x="30" y="120" width="44" height="55"/>
+                  <polygon points="27,120 52,102 77,120" fill="#e0e0e0"/>
+                  <rect x="40" y="94" width="14" height="28"/>
+                  <polygon points="38,94 47,82 56,94" fill="#d4d0d0"/>
+                  <line x1="47" y1="76" x2="47" y2="84" stroke="#888" stroke-width="1.5"/>
+                  <line x1="44" y1="79" x2="50" y2="79" stroke="#888" stroke-width="1.5"/>
+                  <rect x="36" y="133" width="10" height="13" rx="5" fill="#8ab0c4"/>
+                  <rect x="56" y="133" width="10" height="13" rx="5" fill="#8ab0c4"/>
+                  <rect x="44" y="155" width="16" height="20" rx="8" fill="#8ab0c4"/>
+                </g>
+                <!-- "Baba Vanga" sign hint -->
+                <rect x="25" y="178" width="60" height="14" rx="3" fill="#c4a040" opacity="0.8"/>
+                <text x="31" y="189" fill="white" font-size="7" font-family="sans-serif" font-weight="bold">BABA VANGA</text>
+              </svg>
+              <span class="tour-card__tag">Cultural</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.rupite.duration">3 days</span>
+                <span class="tour-card__location" data-i18n="tour.rupite.location">Rupite, Bulgaria</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.rupite.title">Rupite: Vanga's Legacy &amp; Hot Springs</h3>
+              <p class="tour-card__desc" data-i18n="tour.rupite.desc">Visit the chapel Baba Vanga commissioned herself, soak in the legendary therapeutic mineral springs, and explore the volcanic Kozhuh hill under Belasitsa's shadow.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€590</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="cultural bulgaria" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="varnaTourBg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a6abf"/>
+                    <stop offset="50%" stop-color="#4a9ad4"/>
+                    <stop offset="100%" stop-color="#8ac8f0"/>
+                  </linearGradient>
+                  <linearGradient id="varnaSeaT" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a5a9a"/>
+                    <stop offset="100%" stop-color="#0d3a70"/>
+                  </linearGradient>
+                </defs>
+                <rect width="380" height="220" fill="url(#varnaTourBg)"/>
+                <!-- Sea -->
+                <rect x="0" y="145" width="380" height="75" fill="url(#varnaSeaT)"/>
+                <!-- Beach -->
+                <rect x="0" y="132" width="380" height="18" fill="#e8d870"/>
+                <!-- Dormition Cathedral (Varna's landmark) -->
+                <g fill="#d4b870">
+                  <rect x="130" y="50" width="120" height="90"/>
+                  <!-- Main dome -->
+                  <ellipse cx="190" cy="50" rx="35" ry="22" fill="#2a6ab4"/>
+                  <rect x="180" y="28" width="20" height="24"/>
+                  <ellipse cx="190" cy="28" rx="10" ry="8" fill="#3a7ac4"/>
+                  <!-- Cross -->
+                  <line x1="190" y1="14" x2="190" y2="22" stroke="white" stroke-width="2.5"/>
+                  <line x1="185" y1="17" x2="195" y2="17" stroke="white" stroke-width="2.5"/>
+                  <!-- Side turrets -->
+                  <rect x="135" y="70" width="22" height="65"/>
+                  <ellipse cx="146" cy="70" rx="11" ry="7" fill="#2a6ab4"/>
+                  <rect x="141" y="56" width="10" height="16"/>
+                  <ellipse cx="146" cy="56" rx="5" ry="4" fill="#3a7ac4"/>
+                  <line x1="146" y1="47" x2="146" y2="53" stroke="white" stroke-width="1.5"/>
+                  <line x1="143" y1="50" x2="149" y2="50" stroke="white" stroke-width="1.5"/>
+                  <rect x="223" y="70" width="22" height="65"/>
+                  <ellipse cx="234" cy="70" rx="11" ry="7" fill="#2a6ab4"/>
+                  <rect x="229" y="56" width="10" height="16"/>
+                  <ellipse cx="234" cy="56" rx="5" ry="4" fill="#3a7ac4"/>
+                  <line x1="234" y1="47" x2="234" y2="53" stroke="white" stroke-width="1.5"/>
+                  <line x1="231" y1="50" x2="237" y2="50" stroke="white" stroke-width="1.5"/>
+                  <!-- Windows -->
+                  <g fill="#8ab4d4">
+                    <path d="M155 82 Q163 72 171 82 L171 102 L155 102Z"/>
+                    <path d="M175 80 Q183 68 191 80 L191 105 L175 105Z"/>
+                    <path d="M195 80 Q203 68 211 80 L211 105 L195 105Z"/>
+                    <path d="M213 82 Q221 72 229 82 L229 102 L213 102Z"/>
+                  </g>
+                </g>
+                <!-- Waterfront buildings flanking cathedral -->
+                <g fill="#c4a870" opacity="0.6">
+                  <rect x="0" y="85" width="125" height="65"/>
+                  <rect x="255" y="88" width="125" height="62"/>
+                </g>
+                <!-- Beach umbrellas -->
+                <g>
+                  <ellipse cx="60" cy="135" rx="12" ry="5" fill="#e83030" opacity="0.8"/>
+                  <line x1="60" y1="135" x2="60" y2="148" stroke="#888" stroke-width="1.5"/>
+                  <ellipse cx="150" cy="133" rx="12" ry="5" fill="#ffc030" opacity="0.8"/>
+                  <line x1="150" y1="133" x2="150" y2="146" stroke="#888" stroke-width="1.5"/>
+                  <ellipse cx="250" cy="135" rx="12" ry="5" fill="#30a830" opacity="0.8"/>
+                  <line x1="250" y1="135" x2="250" y2="148" stroke="#888" stroke-width="1.5"/>
+                  <ellipse cx="330" cy="133" rx="12" ry="5" fill="#3050d4" opacity="0.8"/>
+                  <line x1="330" y1="133" x2="330" y2="146" stroke="#888" stroke-width="1.5"/>
+                </g>
+                <!-- Waves -->
+                <g stroke="white" stroke-width="1.2" fill="none" opacity="0.4">
+                  <path d="M0 162 Q47 156 95 162 Q142 168 190 162 Q237 156 285 162 Q332 168 380 162"/>
+                  <path d="M0 178 Q47 172 95 178 Q142 184 190 178 Q237 172 285 178 Q332 184 380 178"/>
+                </g>
+              </svg>
+              <span class="tour-card__tag tour-card__tag--gold">Luxury</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.varna.duration">8 days</span>
+                <span class="tour-card__location" data-i18n="tour.varna.location">Varna &amp; Black Sea Coast, Bulgaria</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.varna.title">Varna &amp; the Golden Black Sea Coast</h3>
+              <p class="tour-card__desc" data-i18n="tour.varna.desc">Beach resort days on the golden sands, evening at the Roman Thermae, the stunning Dormition Cathedral and day trips to Nessebar — UNESCO's coastal jewel.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€1,490</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tour-card" data-category="cultural bulgaria" tabindex="0">
+            <div class="tour-card__img">
+              <svg viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="vtTourBg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1a2d5a"/>
+                    <stop offset="55%" stop-color="#2a4a8a"/>
+                    <stop offset="100%" stop-color="#5a7ab4"/>
+                  </linearGradient>
+                </defs>
+                <rect width="380" height="220" fill="url(#vtTourBg)"/>
+                <!-- Yantra gorge green hills -->
+                <path d="M0 220 Q50 165 100 180 Q150 195 200 165 Q250 135 300 155 Q350 175 380 155 L380 220Z" fill="#2a4a1e"/>
+                <!-- River -->
+                <path d="M0 220 Q60 195 100 205 Q150 215 200 200 Q250 185 300 198 Q350 211 380 202 L380 220Z" fill="#2a6a9a" opacity="0.65"/>
+                <!-- Tsarevets fortress on hill centre -->
+                <g fill="#c4a050">
+                  <!-- Hill -->
+                  <ellipse cx="190" cy="130" rx="110" ry="60" fill="#7a5a28"/>
+                  <!-- Walls -->
+                  <rect x="110" y="100" width="160" height="50" fill="#c4a050"/>
+                  <!-- Merlons -->
+                  <g fill="#c4a050">
+                    <rect x="110" y="89" width="8" height="13"/><rect x="122" y="89" width="8" height="13"/>
+                    <rect x="134" y="89" width="8" height="13"/><rect x="146" y="89" width="8" height="13"/>
+                    <rect x="158" y="89" width="8" height="13"/><rect x="170" y="89" width="8" height="13"/>
+                    <rect x="182" y="89" width="8" height="13"/><rect x="194" y="89" width="8" height="13"/>
+                    <rect x="206" y="89" width="8" height="13"/><rect x="218" y="89" width="8" height="13"/>
+                    <rect x="230" y="89" width="8" height="13"/><rect x="242" y="89" width="8" height="13"/>
+                    <rect x="254" y="89" width="8" height="13"/>
+                  </g>
+                  <!-- Baldwin Tower keep -->
+                  <rect x="170" y="58" width="40" height="48"/>
+                  <rect x="168" y="47" width="8" height="13"/><rect x="179" y="47" width="8" height="13"/>
+                  <rect x="190" y="47" width="8" height="13"/><rect x="201" y="47" width="8" height="13"/>
+                  <!-- Chapel on tower -->
+                  <rect x="180" y="34" width="20" height="16"/>
+                  <polygon points="178,34 190,22 202,34" fill="#d4b060"/>
+                  <line x1="190" y1="16" x2="190" y2="23" stroke="white" stroke-width="2"/>
+                  <line x1="186" y1="19" x2="194" y2="19" stroke="white" stroke-width="2"/>
+                  <!-- Gate towers -->
+                  <rect x="115" y="76" width="26" height="38"/>
+                  <rect x="112" y="65" width="7" height="13"/><rect x="123" y="65" width="7" height="13"/>
+                  <rect x="134" y="65" width="7" height="13"/>
+                  <rect x="239" y="76" width="26" height="38"/>
+                  <rect x="237" y="65" width="7" height="13"/><rect x="248" y="65" width="7" height="13"/>
+                  <rect x="259" y="65" width="7" height="13"/>
+                </g>
+                <!-- Medieval houses on slopes -->
+                <g fill="#c4a060" opacity="0.5">
+                  <rect x="30" y="162" width="28" height="24"/>
+                  <polygon points="27,162 44,148 61,162" fill="#9a7830"/>
+                  <rect x="322" y="158" width="28" height="24"/>
+                  <polygon points="319,158 336,144 353,158" fill="#9a7830"/>
+                </g>
+                <!-- Light show rays (the famous Tsarevets light show) -->
+                <g stroke="#e8b830" stroke-width="1.5" fill="none" opacity="0.5">
+                  <line x1="190" y1="22" x2="60" y2="0"/>
+                  <line x1="190" y1="22" x2="190" y2="0"/>
+                  <line x1="190" y1="22" x2="320" y2="0"/>
+                </g>
+              </svg>
+              <span class="tour-card__tag">Cultural</span>
+            </div>
+            <div class="tour-card__body">
+              <div class="tour-card__meta">
+                <span class="tour-card__duration" data-i18n="tour.vturnovo.duration">5 days</span>
+                <span class="tour-card__location" data-i18n="tour.vturnovo.location">Veliko Turnovo, Bulgaria</span>
+              </div>
+              <h3 class="tour-card__title" data-i18n="tour.vturnovo.title">Tsarevets &amp; the Medieval Heartland</h3>
+              <p class="tour-card__desc" data-i18n="tour.vturnovo.desc">The old capital of the Second Bulgarian Empire — Tsarevets fortress, the nightly Sound &amp; Light show, Samovodska Charshiya craftsmen and an overnight in a restored Ottoman-era inn.</p>
+              <div class="tour-card__footer">
+                <div class="tour-card__price">
+                  <span class="price__from" data-i18n="tours.from">from</span>
+                  <span class="price__amount">€870</span>
+                  <span class="price__pp" data-i18n="tours.pp">per person</span>
+                </div>
+                <button class="btn btn--primary btn--sm" data-i18n="tours.book">Book Now</button>
+              </div>
+            </div>
+          </article>
+
+
+        </div>
+
+        <div class="tours__footer">
+          <button class="btn btn--outline" data-i18n="tours.viewAll">View All 320+ Tours</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== WHY US STRIP ========== -->
+    <section class="section why-us" id="experiences">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow" data-i18n="why.eyebrow">The ETC Difference</p>
+          <h2 class="section__title" data-i18n="why.title">Travel as It Should Be</h2>
+        </header>
+        <div class="why-grid">
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M20 10v10l7 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="why-card__title" data-i18n="why.1.title">30 Years of Expertise</h3>
+            <p class="why-card__text" data-i18n="why.1.text">Founded in 1994, we've spent three decades forging deep relationships with local guides, boutique hotels, and cultural institutions across Europe.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M20 4C11 4 4 11 4 20s7 16 16 16 16-7 16-16S29 4 20 4z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M20 4v32M4 20h32M8 10.5Q14 16 20 14Q26 12 32 10.5M8 29.5Q14 24 20 26Q26 28 32 29.5" stroke="currentColor" stroke-width="1.2" fill="none"/>
+              </svg>
+            </div>
+            <h3 class="why-card__title" data-i18n="why.2.title">Expert Local Guides</h3>
+            <p class="why-card__text" data-i18n="why.2.text">Every tour is led by certified, passionate guides who are natives of their region — giving you access to stories no guidebook will ever tell.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M8 32V16l12-8 12 8v16" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M16 32v-8h8v8" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M4 32h32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="why-card__title" data-i18n="why.3.title">Handpicked Accommodation</h3>
+            <p class="why-card__text" data-i18n="why.3.text">From converted Tuscan farmhouses to Belle Époque city hotels — every property is personally inspected for character, comfort and location.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M10 20a10 10 0 1 0 20 0 10 10 0 0 0-20 0z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M20 14l2.5 5 5.5.8-4 3.9.94 5.5L20 26.5 15.06 29.2 16 23.7l-4-3.9 5.5-.8L20 14z" stroke="currentColor" stroke-width="1.2" fill="none"/>
+              </svg>
+            </div>
+            <h3 class="why-card__title" data-i18n="why.4.title">Small Groups Only</h3>
+            <p class="why-card__text" data-i18n="why.4.text">Maximum 16 travellers per tour. No cattle-train tourism — just intimate, unhurried experiences that let you truly connect with each place.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M20 6 L34 14 L34 26 Q34 32 20 36 Q6 32 6 26 L6 14 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M14 20l4 4 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="why-card__title" data-i18n="why.5.title">Fully Protected Travel</h3>
+            <p class="why-card__text" data-i18n="why.5.text">All tours include comprehensive travel insurance, ATOL-protected flights and 24/7 concierge support — so you travel with total peace of mind.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="why-card__icon">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <path d="M6 30 C12 20, 22 18, 34 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M6 22 C14 14, 24 14, 34 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                <circle cx="34" cy="12" r="4" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <h3 class="why-card__title" data-i18n="why.6.title">Sustainable Tourism</h3>
+            <p class="why-card__text" data-i18n="why.6.text">We offset all tour carbon, partner exclusively with eco-certified suppliers and contribute 2% of every booking to European heritage conservation.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="section testimonials">
+      <div class="container">
+        <header class="section__header">
+          <p class="section__eyebrow" data-i18n="testi.eyebrow">Guest Stories</p>
+          <h2 class="section__title" data-i18n="testi.title">Voices From the Road</h2>
+        </header>
+
+        <div class="testimonials__track" id="testimonialsTrack">
+
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-card__quote" data-i18n="testi.1.quote">"The Tuscany tour was simply transformative. Our guide, Marco, didn't just show us places — he revealed them. We came back as different people."</p>
+            <footer class="testimonial-card__author">
+              <div class="author-avatar">MR</div>
+              <div>
+                <strong data-i18n="testi.1.name">Margaret R.</strong>
+                <span data-i18n="testi.1.detail">London, United Kingdom · Italy Tour</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-card__quote" data-i18n="testi.2.quote">"Fourteen days through the Alps felt like a lifetime of memories compressed into the most glorious fortnight of my life. ETC's logistics were flawless."</p>
+            <footer class="testimonial-card__author">
+              <div class="author-avatar">DP</div>
+              <div>
+                <strong data-i18n="testi.2.name">David P.</strong>
+                <span data-i18n="testi.2.detail">Toronto, Canada · Alpine Traverse</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-card__quote" data-i18n="testi.3.quote">"The Burgundy wine tour exceeded every expectation. Winery owners opened their cellars specifically for us. You simply cannot get access like that on your own."</p>
+            <footer class="testimonial-card__author">
+              <div class="author-avatar">SC</div>
+              <div>
+                <strong data-i18n="testi.3.name">Sophie C.</strong>
+                <span data-i18n="testi.3.detail">Sydney, Australia · Burgundy Wine Tour</span>
+              </div>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card">
+            <div class="testimonial-card__stars" aria-label="5 stars">★★★★★</div>
+            <p class="testimonial-card__quote" data-i18n="testi.4.quote">"I've used three other tour operators in Europe. None come close to ETC's attention to detail, the quality of guides, and the authenticity of each experience."</p>
+            <footer class="testimonial-card__author">
+              <div class="author-avatar">HK</div>
+              <div>
+                <strong data-i18n="testi.4.name">Henrik K.</strong>
+                <span data-i18n="testi.4.detail">Stockholm, Sweden · Greece Tour</span>
+              </div>
+            </footer>
+          </blockquote>
+
+        </div>
+
+        <div class="testimonials__nav">
+          <button class="testi-btn" id="testiPrev" aria-label="Previous testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="testimonials__dots" id="testiDots"></div>
+          <button class="testi-btn" id="testiNext" aria-label="Next testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about" id="about">
+      <div class="container about__grid">
+        <div class="about__visual">
+          <svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg" class="about__illustration">
+            <defs>
+              <linearGradient id="aboutBg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1a3a6e"/>
+                <stop offset="100%" stop-color="#2b5490"/>
+              </linearGradient>
+            </defs>
+            <rect width="480" height="520" rx="16" fill="url(#aboutBg)"/>
+            <!-- Map outline of Europe simplified -->
+            <g stroke="rgba(196,168,114,0.4)" stroke-width="1" fill="none" transform="translate(40,60) scale(0.8)">
+              <!-- Simplified Europe outline -->
+              <path d="M180 60 L210 50 L240 55 L270 45 L300 55 L330 50 L360 60 L380 80 L390 110 L380 130 L370 150 L360 170 L350 190 L330 210 L310 225 L290 240 L270 255 L250 270 L230 285 L210 290 L190 280 L180 260 L170 245 L160 230 L155 210 L150 190 L155 170 L160 150 L165 130 L170 110 L172 90 Z" stroke="rgba(196,168,114,0.5)" fill="rgba(196,168,114,0.05)"/>
+              <!-- Country borders hint -->
+              <line x1="200" y1="120" x2="240" y2="125"/>
+              <line x1="250" y1="130" x2="290" y2="140"/>
+              <line x1="220" y1="180" x2="260" y2="200"/>
+              <line x1="270" y1="155" x2="310" y2="165"/>
+            </g>
+
+            <!-- Destination dots on map -->
+            <g>
+              <!-- Paris -->
+              <circle cx="190" cy="170" r="6" fill="#c4a872"/>
+              <circle cx="190" cy="170" r="12" fill="#c4a872" opacity="0.2"/>
+              <!-- Rome -->
+              <circle cx="250" cy="260" r="6" fill="#c4a872"/>
+              <circle cx="250" cy="260" r="12" fill="#c4a872" opacity="0.2"/>
+              <!-- Athens -->
+              <circle cx="300" cy="300" r="6" fill="#c4a872"/>
+              <circle cx="300" cy="300" r="12" fill="#c4a872" opacity="0.2"/>
+              <!-- Barcelona -->
+              <circle cx="185" cy="255" r="6" fill="#c4a872"/>
+              <circle cx="185" cy="255" r="12" fill="#c4a872" opacity="0.2"/>
+              <!-- Alps -->
+              <circle cx="235" cy="210" r="6" fill="#c4a872"/>
+              <circle cx="235" cy="210" r="12" fill="#c4a872" opacity="0.2"/>
+              <!-- Oslo -->
+              <circle cx="230" cy="120" r="5" fill="#c4a872" opacity="0.7"/>
+            </g>
+
+            <!-- Route lines between dots -->
+            <g stroke="#c4a872" stroke-width="1.5" fill="none" stroke-dasharray="4 4" opacity="0.5">
+              <path d="M190 170 Q210 190 235 210"/>
+              <path d="M235 210 Q245 235 250 260"/>
+              <path d="M250 260 Q275 280 300 300"/>
+              <path d="M185 255 Q215 255 235 210"/>
+            </g>
+
+            <!-- Decorative compass rose bottom-right -->
+            <g transform="translate(380, 420)" stroke="#c4a872" stroke-width="1.2" fill="none" opacity="0.6">
+              <line x1="0" y1="-35" x2="0" y2="35"/>
+              <line x1="-35" y1="0" x2="35" y2="0"/>
+              <line x1="-25" y1="-25" x2="25" y2="25"/>
+              <line x1="25" y1="-25" x2="-25" y2="25"/>
+              <circle cx="0" cy="0" r="12"/>
+              <polygon points="0,-35 -5,-20 0,-15 5,-20" fill="#c4a872" opacity="0.8"/>
+              <text x="-4" y="-38" fill="#c4a872" font-size="10" font-family="serif">N</text>
+            </g>
+
+            <!-- Stats overlay -->
+            <rect x="20" y="400" width="200" height="100" rx="8" fill="rgba(0,0,0,0.3)"/>
+            <text x="40" y="430" fill="#c4a872" font-size="28" font-weight="bold" font-family="serif">47</text>
+            <text x="40" y="450" fill="rgba(255,255,255,0.8)" font-size="12" font-family="sans-serif">European Countries</text>
+            <text x="40" y="475" fill="#c4a872" font-size="28" font-weight="bold" font-family="serif">120k+</text>
+            <text x="40" y="495" fill="rgba(255,255,255,0.8)" font-size="12" font-family="sans-serif">Happy Travellers</text>
+          </svg>
+        </div>
+        <div class="about__content">
+          <p class="section__eyebrow" data-i18n="about.eyebrow">Our Story</p>
+          <h2 class="section__title about__title" data-i18n-html="about.title">Three Decades of<br>European Passion</h2>
+          <p class="about__body" data-i18n="about.p1">The European Touristic Company was born in 1994 from a simple conviction: that the best way to understand Europe is not to rush through its highlights, but to linger in its details — the light on a Roman piazza at dusk, the smell of a Provençal market at dawn, the silence of an Alpine valley at noon.</p>
+          <p class="about__body" data-i18n="about.p2">Today we operate over 320 itineraries spanning 47 countries, each designed in partnership with local experts who share our belief that travel should leave a place — and its people — better than it found them.</p>
+          <ul class="about__pillars">
+            <li><span class="pillar__check">✓</span> <span data-i18n="about.pillar1">ATOL &amp; ABTA Protected</span></li>
+            <li><span class="pillar__check">✓</span> <span data-i18n="about.pillar2">B Corp Certified</span></li>
+            <li><span class="pillar__check">✓</span> <span data-i18n="about.pillar3">Winner: Which? Travel Awards 2023</span></li>
+            <li><span class="pillar__check">✓</span> <span data-i18n="about.pillar4">Member: European Tourism Association</span></li>
+          </ul>
+          <button class="btn btn--primary" data-i18n="about.btn">Meet Our Team</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT / ENQUIRY ========== -->
+    <section class="section contact" id="contact">
+      <div class="contact__backdrop" aria-hidden="true">
+        <svg viewBox="0 0 1440 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <rect width="1440" height="500" fill="#0d1e3e"/>
+          <path d="M0 250 Q360 150 720 250 Q1080 350 1440 250 L1440 500 L0 500Z" fill="#132240" opacity="0.8"/>
+          <path d="M0 300 Q360 200 720 300 Q1080 400 1440 300 L1440 500 L0 500Z" fill="#0a1830" opacity="0.6"/>
+          <g fill="#c4a872" opacity="0.2">
+            <circle cx="200" cy="100" r="2"/><circle cx="400" cy="60" r="1.5"/>
+            <circle cx="700" cy="80" r="2"/><circle cx="1000" cy="50" r="1.5"/>
+            <circle cx="1200" cy="90" r="2"/><circle cx="100" cy="180" r="1"/>
+            <circle cx="900" cy="130" r="1.5"/><circle cx="1350" cy="70" r="2"/>
+          </g>
+        </svg>
+      </div>
+      <div class="container contact__inner">
+        <div class="contact__copy">
+          <p class="section__eyebrow contact__eyebrow" data-i18n="contact.eyebrow">Start Your Journey</p>
+          <h2 class="section__title contact__title" data-i18n-html="contact.title">Let's Plan Your<br>Perfect Trip</h2>
+          <p class="contact__body" data-i18n="contact.body">Speak with a dedicated travel consultant who will design an itinerary around your interests, timeframe and budget. No obligation — just great ideas.</p>
+          <div class="contact__info">
+            <div class="contact__info-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span data-i18n="contact.phone">+44 20 7946 0312</span>
+            </div>
+            <div class="contact__info-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span data-i18n="contact.email">enquiries@europeantouristic.com</span>
+            </div>
+            <div class="contact__info-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span data-i18n="contact.hours">Mon–Fri, 9 am – 7 pm GMT</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact__form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName" data-i18n="form.firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" data-i18n-placeholder="form.ph.firstName" placeholder="Anna" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName" data-i18n="form.lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" data-i18n-placeholder="form.ph.lastName" placeholder="Müller" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="form.email">Email Address</label>
+            <input type="email" id="email" name="email" data-i18n-placeholder="form.ph.email" placeholder="anna@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="destination" data-i18n="form.destination">Destination of Interest</label>
+            <select id="destination" name="destination">
+              <option value="" data-i18n="form.destination.default">Select a destination…</option>
+              <option>Italy</option>
+              <option>France</option>
+              <option>Greece</option>
+              <option>Spain</option>
+              <option>Switzerland &amp; Austria</option>
+              <option>Norway &amp; Iceland</option>
+              <option>Portugal</option>
+              <option>Bulgaria — Bansko</option>
+              <option>Bulgaria — Melnik</option>
+              <option>Bulgaria — Rupite</option>
+              <option>Bulgaria — Varna</option>
+              <option>Bulgaria — Veliko Turnovo</option>
+              <option>Croatia &amp; Balkans</option>
+              <option>Multiple Destinations</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="duration" data-i18n="form.duration">Tour Duration</label>
+              <select id="duration" name="duration">
+                <option value="" data-i18n="form.duration.default">Any…</option>
+                <option data-i18n="form.duration.1">Up to 7 days</option>
+                <option data-i18n="form.duration.2">8–14 days</option>
+                <option data-i18n="form.duration.3">15–21 days</option>
+                <option data-i18n="form.duration.4">22+ days</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="groupSize" data-i18n="form.groupSize">Group Size</label>
+              <select id="groupSize" name="groupSize">
+                <option value="" data-i18n="form.groupSize.default">Select…</option>
+                <option data-i18n="form.groupSize.1">Solo</option>
+                <option data-i18n="form.groupSize.2">Couple (2)</option>
+                <option data-i18n="form.groupSize.3">Small group (3–6)</option>
+                <option data-i18n="form.groupSize.4">Larger group (7+)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="form.message">Tell Us More (optional)</label>
+            <textarea id="message" name="message" rows="3" data-i18n-placeholder="form.ph.message" placeholder="Interests, travel dates, special requests…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" data-i18n="form.submit">Send Enquiry</button>
+          <p class="form-note" data-i18n="form.note">We reply within one business day. Your data is never shared with third parties.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a href="#" class="logo logo--footer" aria-label="ETC home">
+          <svg class="logo__mark" width="32" height="32" viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 18 Q18 8 28 18 Q18 28 8 18Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+            <circle cx="18" cy="18" r="3" fill="currentColor"/>
+          </svg>
+          <span class="logo__text">
+            <span class="logo__abbr">ETC</span>
+          </span>
+        </a>
+        <p class="footer__tagline" data-i18n="footer.tagline">Curating unforgettable European journeys since 1994.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter" class="social-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading" data-i18n="footer.dest.heading">Destinations</h4>
+        <ul role="list" class="footer__links">
+          <li><a href="#">Italy</a></li>
+          <li><a href="#">France</a></li>
+          <li><a href="#">Greece</a></li>
+          <li><a href="#">Spain</a></li>
+          <li><a href="#">Switzerland</a></li>
+          <li><a href="#">Bulgaria</a></li>
+          <li><a href="#">Portugal</a></li>
+          <li><a href="#" data-i18n="footer.all.dest">All Destinations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading" data-i18n="footer.tours.heading">Tour Types</h4>
+        <ul role="list" class="footer__links">
+          <li><a href="#" data-i18n="footer.tours.cultural">Cultural Tours</a></li>
+          <li><a href="#" data-i18n="footer.tours.culinary">Culinary Journeys</a></li>
+          <li><a href="#" data-i18n="footer.tours.adventure">Adventure Tours</a></li>
+          <li><a href="#" data-i18n="footer.tours.luxury">Luxury Escapes</a></li>
+          <li><a href="#" data-i18n="footer.tours.solo">Solo Travel</a></li>
+          <li><a href="#" data-i18n="footer.tours.private">Private Groups</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading" data-i18n="footer.company.heading">Company</h4>
+        <ul role="list" class="footer__links">
+          <li><a href="#" data-i18n="footer.company.about">About ETC</a></li>
+          <li><a href="#" data-i18n="footer.company.guides">Our Guides</a></li>
+          <li><a href="#" data-i18n="footer.company.sustain">Sustainability</a></li>
+          <li><a href="#" data-i18n="footer.company.press">Press Room</a></li>
+          <li><a href="#" data-i18n="footer.company.careers">Careers</a></li>
+          <li><a href="#" data-i18n="footer.company.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p class="footer__legal" data-i18n="footer.legal">© 2026 European Touristic Company Ltd. Registered in England &amp; Wales. ATOL 12345 · ABTA W9823.</p>
+        <nav class="footer__legal-links" aria-label="Legal">
+          <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer.terms">Terms &amp; Conditions</a>
+          <a href="#" data-i18n="footer.cookies">Cookie Policy</a>
+          <a href="#" data-i18n="footer.accessibility">Accessibility</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
